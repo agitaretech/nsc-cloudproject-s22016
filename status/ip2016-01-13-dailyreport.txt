@@ -1,0 +1,12 @@
+What have you completed since the last report?
+>Initial meeting with group in class. 
+	>Assigned members to work on database schema (if SQL is their preferred solution) OR a NoSQL object format.
+>Determined that our group will handle pagination (sending only a few items at once, not all results).
+	>Spoke with Web team to inform them of this.
+
+What do you plan to complete by the next report?
+>Need to speak with mobile team about pagination.
+>Need to speak with client regarding storage.
+
+What is getting in your way?
+>Currently no blockers, but research is ongoing until next Tuesday.
