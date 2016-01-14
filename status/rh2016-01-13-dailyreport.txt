@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 1/13/16
+
+What have you completed since the last report?
+Our group met to discuss the technologies we are going to use for the API/DB/Storage solution.  We decided to take the week to research the technologies we are going to use for the quarter.  I started to research documentDB and Python’s library to interact with documentDB. 
+
+What do you plan to complete by the next report?
+I plan to continue researching documentDB and start building a database schema to share with the team on Tuesday(1/19).  I’m also going to download documentDB’s Python library and start exploring it on my Azure account. 
+
+What is getting in your way?
+As of right now, there isn’t anything interfering with my ability to complete milestones or project obligations.  
