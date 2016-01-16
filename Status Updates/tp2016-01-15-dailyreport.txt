@@ -1,0 +1,15 @@
+1.  What have you completed since the last report?
+	
+	UI for portrait mode is almost complete.  The android recyclerview has been built for containing each row of 
+	image data so it can be scrolled through.  The UI for searching has been put in place, along with an upload
+	button for pictures, in the toolbar at the top of the home screen.
+
+2.  What do you plan to complete by the next report?
+
+	By monday, each row of image data will have a handler attached to it for launching the image in a 
+	separate activity in an expanded view.
+
+3.  What is getting in your way?
+
+	No major obstacles yet, but Stephen and I need to get together and sync our ideas for the landscape and
+	portrait modes of the application.
