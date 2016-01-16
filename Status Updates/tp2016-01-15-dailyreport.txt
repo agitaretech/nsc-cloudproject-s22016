@@ -12,4 +12,4 @@
 3.  What is getting in your way?
 
 	No major obstacles yet, but Stephen and I need to get together and sync our ideas for the landscape and
-	portrait modes of the application.
+	portrait modes of the application. 
