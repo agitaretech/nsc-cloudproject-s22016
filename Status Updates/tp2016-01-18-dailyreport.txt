@@ -1,0 +1,12 @@
+1.  What have you completed since the last report?
+    
+    I have attached a handler to each image object item that launches a new activity with an expanded version of the photo and all its tags.  Stephen and I merged our code together so now the landscape mode has a unique dual window view.
+    
+2.  What do you plan to complete by the next report?
+    
+    Consult with the database team to get an idea of the format our app will receive when making ajax calls.
+    
+3.  What is getting in your way?
+
+    Nothing is getting in our way, but talking with the other teams is going to be crucial to make more progress.
+    
