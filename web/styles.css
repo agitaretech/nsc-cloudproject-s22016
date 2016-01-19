@@ -89,7 +89,14 @@ footer { clear:both;}
 footer { height: 50px;}
 
 
-
+#main-uploud {
+	
+	
+	
+	}
+	
+#main-drag-image { width:100%; }
+div#main-drag-image form #dragged-image { padding:25px; background-color:#fff; height:300px; width: 90%;  }
 
 
 
