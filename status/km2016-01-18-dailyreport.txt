@@ -1,0 +1,23 @@
+Name: Kianoush Moradian
+Report:  1-18-2016
+
+
+
+* What have you completed since the last report?
+I created two more HTML template web pages which I called them 
+"template-select-to-uploud.html" and "template-uploud-image.html".
+Also I started reading a tutorial on W3School about AngularJS
+I was in contact with Ian about the latest changes and group accomplishments
+
+* What do you plan to complete by the next report?
+The most important thing I should to is keep learning about AngularJS.
+
+
+* What is getting in your way?
+AngularJS is a little bit vague to me. I need to study more about it.
+
+
+
+
+
+
