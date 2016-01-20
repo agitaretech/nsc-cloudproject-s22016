@@ -7,7 +7,7 @@ our files easier
 
 Plan: We plan to work on UI html file +  Learn about AngularJS
 
-Issue: We have some difficulties on Github. We need more practice.
+Issue: We have some dificulties on Github. We need more practice.
 
 
 
