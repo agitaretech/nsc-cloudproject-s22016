@@ -1,0 +1,67 @@
+RJ Hunter
+AD 440
+Date: 1/20/16
+
+What have you completed since the last report?
+
+As a team we decided on a basic schema based on everyone's input during class.  The basic schema is based on the JSON document below. 
+
+{
+  "photo_url": "www.fake_image_url.com",
+  "photo_id": "1234",
+  "user_id": "1",
+  "file_name": "fake_name.jpg",
+  "tag": [
+    "fun",
+    "scary",
+    "horror"
+  ],
+  "id": "d050f30a-04bb-3630-cfdd-b98a9e26dbc9"
+}
+
+
+We also decided to not worry about use cases for downloading images.  Since the image is stored in a URL, the user should be able to right click on the image and download it from the browser.
+
+We met with the client side teams as well and discussed what we could potentially be sending them.  An example is below.
+
+[
+  {
+    "photo_url": "www.fake_image_url.com",
+    "tag": [
+      "fun",
+      "scary",
+      "horror"
+    ],
+    "file_name": "fake_name.jpg"
+  },
+  {
+    "photo_url": "www.fake_image_url2.com",
+    "tag": [
+      "fun",
+      "exciting",
+      "lame"
+    ],
+    "file_name": "fake_name_2.jpg"
+  }
+]
+
+What do you plan to complete by the next report?
+As for next steps, we split up the research work for the remaining pieces of the project.  The pieces that need to be implemented/researched are below.  Each member will be researching their piece of their project for the next meeting.
+
+Azure Storage & Python BlobService - Jesse and Baldwin
+BlobService is a Python package to interact with Azure's Storage.
+How to use Azure Blob storage from Python | Microsoft Azure
+
+Web App & Python Tornado - Rexhep and Chunda
+Tornado is a web framework for Python
+http://www.tornadoweb.org/en/stable/
+
+documentDB access and Python documentDB - RJ
+Package for Python to communicate with documentDB
+http://azure.github.io/azure-documentdb-python/
+
+I plan to start building a Python widget that can query the documentDB database and add documents to it.  I’ll use the documentDB package for Python listed above.
+
+What is getting in your way?
+
+As of right now, there isn’t anything interfering with my ability to complete milestones or project obligations.  
