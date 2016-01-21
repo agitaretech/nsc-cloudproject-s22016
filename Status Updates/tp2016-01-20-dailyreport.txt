@@ -1,0 +1,12 @@
+1.  What have you completed since the last report?
+    
+    Talked with DB team and found out that they will be sending us a url for each photo.  This means that we will be downloading a photo   to the phone every time the user selects a photo.
+
+2.  What do you plan to complete by the next report?
+    
+    Apply a little polish to the UI.  I will make the buttons that contain the tags for each photo look more presentable.
+
+3.  What is getting in your way?
+
+    No issues.
+
