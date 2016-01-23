@@ -1,0 +1,14 @@
+RJ Hunter
+AD 440
+Date: 1/22/16
+
+What have you completed since the last report?
+I haven’t done a lot from the last daily report.  I’ve downloaded the documentDB package for Python.  I’ve also started to read through the documentation.
+
+What do you plan to complete by the next report?
+
+I plan to start building the Python widget this weekend.  The widget will connect to our database instance and will be able to perform a simple query to get all documents. 
+
+What is getting in your way?
+
+As of right now, there isn’t anything interfering with my ability to complete milestones or project obligations.  
