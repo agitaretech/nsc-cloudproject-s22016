@@ -18,6 +18,7 @@ It is not possible to do it on website or in desktop software.
 git rm -r --cached Status
 git commit -m "Removed folder from repository"
 git push origin master
+<<<<<<< HEAD
 
 
 * What is getting in your way?
@@ -32,3 +33,12 @@ Kianoush: I work on uploading image and generating JSON
 
 
 ------------------------------> This status report will be completed on due date
+=======
+
+
+* What is getting in your way?
+In our yesterday team meeting we made some goals for the next step. 
+Avi: works on getting JSON and displaying image on UI
+Ksenia: Works on scrolling image piece and Bootstrap CSS integration
+Kianoush: I work on uploading image and generating JSON 
+>>>>>>> refs/remotes/origin/kianoushmoradian
