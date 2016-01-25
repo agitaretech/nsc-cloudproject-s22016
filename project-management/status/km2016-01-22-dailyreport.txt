@@ -16,7 +16,7 @@ Uplouding needs to have both client side and server side codings.
 It is hard to test it out without touching severside codings. 
 I am now writing PHP code to get the request from my browser and save the 
 <<<<<<< HEAD
-file inside a folder on the server. Hope ot works!
+file inside a folder on the server. Hope it works!
 
 
 
