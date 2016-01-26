@@ -1,0 +1,12 @@
+1.  What have you completed since the last report?
+    
+    Integrated Brandon's progess on the camera functionality.
+
+2.  What do you plan to complete by the next report?
+    
+    Now the app is ready for a little clean up for the UI.  I plan to sylize the buttons that represent each tag for a photo.
+
+3.  What is getting in your way?
+
+    We ended up having trouble transfering data between some of the fragment views in our app.  This did consume quite a bit of time, but we do have it resolved.  Because of this, we didn't get around to applying any polish to the UI like we had hoped.  
+
