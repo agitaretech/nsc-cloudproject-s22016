@@ -25,8 +25,18 @@ I need to find a way to just choose images to upload. Hopefully everything is do
 till ending this week. 
 Also I need to talk to my team members to see what they have completed to 
 merge with the rest of files. 
+<<<<<<< HEAD
 
 
+=======
+
+
+
+* What is getting in your way?
+AngularJS is new to me. I have to use lots of js and css libraries which 
+I have no idea about them. It takes lots of my time to find them, 
+merge them with my default codes, and test them out.
+>>>>>>> refs/remotes/origin/kianoushmoradian
 
 * What is getting in your way?
 AngularJS is new to me. I have to use lots of js and css libraries which 
