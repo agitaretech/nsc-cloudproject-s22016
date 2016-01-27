@@ -1,6 +1,0 @@
-Mobile Client group: Joaquin Bautista
-1. Today I have completed the login page for Twitter, Facebook, and Google Plus.
-2. No problems or changes.
-3. My plan is to do the code merge with Tobin and Stephens vertical and horizontal home pages and Brandon's Camera pages which might seem difficult
-because my login page interacts with its own possible pre-defined activities. Our other full plan is to collabrate with the database team and continue
-our research and prototyping.
