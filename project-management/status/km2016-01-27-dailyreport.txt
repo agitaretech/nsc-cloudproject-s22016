@@ -4,17 +4,17 @@ Report:  1-27-2016
 
 
 * What have you completed since the last report?
+I have done with upload page. Also I have added "accept" tag to limit uploading to get just mages.
 
 
 * What do you plan to complete by the next report?
 
+I am planning to 
+1- check the project structure and update it
+2- Do pull request to update "Master" on toddy's git side
+3- research about how to create JSON file in JS to update tags
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+Some of our tasks depend on "Dev" team. For example to search, update tables, or 
+updating user info (on the top-right of every page), we need to get some 
+output from dev team. I think we should redo some of work since dev team is behind. 
