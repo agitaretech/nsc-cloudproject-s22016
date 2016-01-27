@@ -1,7 +1,7 @@
 AD440
 1/25/16
 
-Status Report 6:
+Status Report 7:
 
 1) I have succesfully parsed a JSON file using my AngularJS controller
    which calls the JSON file with an AJAX call. 
