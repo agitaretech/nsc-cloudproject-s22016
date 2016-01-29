@@ -4,17 +4,13 @@ Report:  1-29-2016
 
 
 * What have you completed since the last report?
-
+Project directory and its structure reviewed. Also I pushed (pull request)
+The corrected directory (project folder) to Toddy's master Github. 
 
 * What do you plan to complete by the next report?
-
+Our next goal for next Tuesday is completing "Display page".
+We need to merge two pieces and come up with the final version which meet requirements in wireframe
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+Other than this class I have two other classes with lots of class assignments. 
+Seems I should copy and paste myself to make enough time to finish all of them. :)
