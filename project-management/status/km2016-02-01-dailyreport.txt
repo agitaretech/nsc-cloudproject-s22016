@@ -3,18 +3,16 @@ Report:  2-1-2016
 
 
 
-* What have you completed since the last report?
 
+* What have you completed since the last report?
+Main Github master branch updated. 
+I read about searching box and possible approaches 
+I have been in contact with Ksenia and Avi to finish Display AngularJS file
 
 * What do you plan to complete by the next report?
-
+I am planning to start coding Search box and make it functional.
+Will have meeting with my team members to review our work and plan for next team goal.
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+Web UI team has been worked hard. Now we are mostly waiting for Dev team to see 
+what they finish and give us to connect to our UI.
