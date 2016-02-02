@@ -3,7 +3,6 @@ Report:  2-1-2016
 
 
 
-
 * What have you completed since the last report?
 Main Github master branch updated. 
 I read about searching box and possible approaches 
@@ -16,3 +15,5 @@ Will have meeting with my team members to review our work and plan for next team
 * What is getting in your way?
 Web UI team has been worked hard. Now we are mostly waiting for Dev team to see 
 what they finish and give us to connect to our UI.
+
+
