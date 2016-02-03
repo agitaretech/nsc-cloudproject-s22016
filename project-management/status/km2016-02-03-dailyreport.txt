@@ -1,4 +1,4 @@
-Name: Kianoush Moradian
+﻿Name: Kianoush Moradian
 Report:  2-3-2016
 
 
@@ -20,3 +20,5 @@ Ksenia will work on Display page and I and Avi will work on “Login”
 
 * What is getting in your way?
 Since AngularJS and Login process are new, we need to learn them and it takes time.
+
+
