@@ -4,17 +4,19 @@ Report:  2-3-2016
 
 
 * What have you completed since the last report?
+I had a great meeting with my team members and also other teams. 
+In our team we talked about barriers and issues we are dealing with. Display page works based on JSON files and we had to decide about the JSON format. Also we talked about how to make the current design compatible with Toddy’s wireframe. 
+
+Also, I had technical conversation with other teams; Jessy, IAN, RJ, and Ian.
+Ian promised us to give us his desire JSON format by the next week. And R.J is going to send us some documents about “Twitter JS code”.
+I presented our upload code and PHP which I had created. We talked about “POST” Request and their programming language “Flex”. 
+
 
 
 * What do you plan to complete by the next report?
+We have two goals this week. 1- Finishing Display page 2- Starting Twitter login. 
+Ksenia will work on Display page and I and Avi will work on “Login”
 
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+Since AngularJS and Login process are new, we need to learn them and it takes time.
