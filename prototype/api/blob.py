@@ -11,7 +11,7 @@ BlobService takes parameters of storage account name and the primary account key
 next, set the container to be viewable for public access, this way the user will be able to
 actually see their image from the url we give back.
 """
-blob_service = BlobService(account_name='jesse15', account_key='iQfMxRlQ1nYsp+pKWNuE+3XzvCsO3VqqXHoUB/TItJ68UN7Iz9zGLi/dgXgBXkIdP25P7PoBG3TlUQr/bDej+A==')
+blob_service = BlobService(account_name='jesse15', account_key='')
 
 blob_service.create_container(username, x_ms_blob_public_access='container')
 
