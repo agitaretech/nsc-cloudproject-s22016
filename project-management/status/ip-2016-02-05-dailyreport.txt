@@ -1,0 +1,9 @@
+What have you completed since the last report?
+>Discussed Celery implementation with group.
+
+What do you plan to complete by the next report?
+>Finalize JSON to be handed to other groups.
+	-Finalize all data to be included, which has changed with the datetime now in use.
+
+What is getting in your way?
+>Very limited time from Wednesday to Friday this week prevented JSON finalization. Punting that to the weekend.
