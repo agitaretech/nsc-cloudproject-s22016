@@ -1,0 +1,12 @@
+What have you completed since the last report?
+>Further fleshed out required workflow for project.
+>Slightly modified database insertion code, and prepped notes for integration of async.
+>Found Celery to handle async tasks and implement task queues. Great solution once implemented.
+
+What do you plan to complete by the next report?
+>Finalize JSON to be handed to other groups.
+	-Finalize all data to be included, which has changed with the datetime now in use.
+>Spend more time reading about Celery implementation.
+
+What is getting in your way?
+>Flask may be amazing for azure, but it's not a great async solution. This is forcing us to research Celery, which may also act as a way to distribute tasks from a queue over multiple servers if the application scales in the future.
