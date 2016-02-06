@@ -1,0 +1,13 @@
+RJ Hunter
+AD 440
+Date: 2/5/16
+
+What have you completed since the last report?
+I haven’t completed a lot since my last update.  I plan to take my research on OAuth and develop a widget that checks the Twitter credentials prior to server side processing.
+
+
+What do you plan to complete by the next report?
+I’m going to start developing the Python code for the OAuth check.  I’m also going to build a test page to check if the OAuth code is working.  I’m also going to start working with Celery (Async Queue Package for Flask) and build out a Async Queue for our app.
+
+What is getting in your way?
+I’m finally out of the research stage of my portion of the project, which was slowing down my development.  So, at this time, there is nothing getting in my way of completing my portion of the project for next week.
