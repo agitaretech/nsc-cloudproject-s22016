@@ -1,0 +1,12 @@
+AD440
+1/12/16
+
+Status Report 1:
+
+1) I did research on Angular JS using w3Schools. 
+   I learned about Expressions and Modules.
+   I also learned how to use GitHub desktop and starting to use Source Tree.
+
+2) I am planning to take an online course at Codecademy to learn Angular JS
+
+3) Learning how to Push into my Branch at Git was a struggle. 
