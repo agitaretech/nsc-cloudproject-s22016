@@ -4,17 +4,16 @@ Report:  2-8-2016
 
 
 * What have you completed since the last report?
-
+I learned about OAuth. How it works and what we should we have to login with twitter account.
+Also Ian and R.J sent two separate emails. Ian gave us his JSON file format yesterday night and R.J sent an email today morning. I forwarded his email to my team members. Also I need to read them carefully tonight.
 
 * What do you plan to complete by the next report?
-
+For tomorrow we try to finish display page. Ksenia is the one who is doing that. Avi and I are working on twitter login. We need to finish it this heading week. 
 
 * What is getting in your way?
+There are many things new and we need to first learn and read them and then implement them. It takes time.  
 
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+* Peer Evaluation
+Furtunately I work with really nice people in UI team. Avi and Ksenia are working hard to accomplish tasks.
+Avi Herbstman: 5/5   He has done really great job to get JSON and display images on a html page.
+Ksenia Ivansova:  5/5 She works on image grouping (carousel) to display images in set of 20s
