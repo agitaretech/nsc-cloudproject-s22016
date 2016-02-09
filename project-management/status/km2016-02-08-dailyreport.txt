@@ -12,3 +12,8 @@ For tomorrow we try to finish display page. Ksenia is the one who is doing that.
 
 * What is getting in your way?
 There are many things new and we need to first learn and read them and then implement them. It takes time.  
+
+* Peer Evaluation
+Furtunately I work with really nice people in UI team. Avi and Ksenia are working hard to accomplish tasks.
+Avi Herbstman: 5/5   He has done really greate job to get JSON and display images on a html page.
+Ksenia Ivansova:  5/5 She works on image grouping (carousel) to display images in set of 20s
