@@ -1,0 +1,8 @@
+Rexhep Hertica
+AD440 Report status
+01/15/2016
+https://github.com/rhertica/nsc-cloudproject-s22016/tree/master/status
+
+Yesterday I have been searching for the way how to use the github and I tryed to use Source tree for our project but it did not loook right for me so I asked Ian about the problem and he sugested me to use different one from his search and his view so I followed him and finaly got the file ready to be seen online in my github.
+Today I am working on finding the solution for the group project and I am reading a lot of interesting things about SQL and Non SQL so until Monday I am just searching and trying to make decision for myself which one would be a good source for group proposition.
+Next day's until next group meeting, I will try to make some researches and make some small practicing with what I will found in internet about our group project.

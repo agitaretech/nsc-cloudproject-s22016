@@ -1,0 +1,8 @@
+Rexhep Hertica
+AD440 
+https://github.com/rhertica/nsc-cloudproject-s22016
+01/13/2016
+
+This week I have been searching for the cloud project and the way how to find the better solution and what we need to make the project. 
+Today I was trying to do the “homework” and followed the instruction written in canvas about how to use Github and Source Tree. 
+The next day’s I am planning to continue on finding from the internet the way how to use SQL or NoSql and will make decision for myself what I can present to my group meeting on Tuesday. 
