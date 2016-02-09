@@ -1,0 +1,12 @@
+What have you completed since the last report?
+
+I've done a bunch of research on Blob Storage with Azure using Python. I should be able to have a quick script up within a couple days
+that demonstrates creating a container and adding a blob to that container in Azure using Python.
+
+What do you plan to complete by the next report?
+
+I will have a Python script which connects to my Azure account, creates a container, and adds an image to that container in the form of a blob.
+
+What is getting in your way?
+
+The basic process on connecting to Azure with Python. It doesn't look too complicated but it should be pretty doable.

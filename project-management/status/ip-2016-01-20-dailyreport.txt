@@ -1,0 +1,10 @@
+What have you completed since the last report?
+>Reviewed group solution to database question.
+	>Group handled a final decision on Tuesday. It's a good solution with a solid schema.
+>Found and proposed a solution to pagination using SQL queries
+
+What do you plan to complete by the next report?
+>Communicate with team regarding their research.
+
+What is getting in your way?
+>I am on vacation from 1/16 - 1/23, with limited communications and time. Whales!

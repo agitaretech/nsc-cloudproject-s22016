@@ -1,0 +1,10 @@
+What have you completed since the last report?
+>Completed the model for how to sort and identify database objects (chose datetime).
+>Prepared a general agenda for the Saturday meetup.
+
+What do you plan to complete by the next report?
+>Write code for insertion of new records into the metadata via python.
+>Meet with group Saturday.
+
+What is getting in your way?
+>Without prior knowledge of how to deal with OAuth (on the web or mobile platforms), our group is having to do some notable research.

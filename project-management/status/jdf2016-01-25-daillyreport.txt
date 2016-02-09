@@ -1,0 +1,15 @@
+What have you completed since the last report?
+
+Successfully created a container and blob storage using Python. Tutorial very easily walks you through the basic process.
+Creating a BlobService object allows the script to connect to the Azure account, and from there creating the 
+storage URL is very simple. This is the basic concept I believe we will be using for our document image storage.
+
+What do you plan to complete by the next report?
+
+Whatever we discuss as a team will be the necessary next step. Based on working BlobStorage, and Tornado,
+I believe we will be working to connect all the pieces together to create a JSON object displayed in a webpage
+that contains the DocumentDB metadata, and a URL generated through BlobStorage on Azure.
+
+What is getting in your way?
+
+Just need to meet with team members to show all of our work to each other.
