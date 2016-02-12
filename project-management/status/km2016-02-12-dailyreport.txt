@@ -4,17 +4,13 @@ Report:  2-12-2016
 
 
 * What have you completed since the last report?
-
+I finished up my reflection and peer evaluation reports. Searched about AngularJS HTTP Post request 
+to see how it is possible to send an image and text all together. Also I had short meeting with Avi and Ksenia yesterday talking about the project latest status. 
 
 * What do you plan to complete by the next report?
-
+I need to search more to find a good AngularJS library to help posting image and text both together. 
+Cross your figure for me please!
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+The libraries (controllers) I have found to add to our AngularJS have not fully functional and 
+sometimes have not worked without giving pointing to any errors. I need to keep working and searching. 
