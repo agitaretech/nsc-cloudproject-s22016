@@ -8,13 +8,8 @@ accountKey = ''
 blob_service = BlobService(accountName, accountKey)
 uploaded = False
 
-def main():
-    
-    URL = "https://jesse15.blob.core.windows.net/testuser/2016-02-12173717188246"
-    uploadBlob("testuser", URL)
-                             
-def uploadBlob(username, file):
-
+def uploadBlob(username, file, filename, token, secret):
+    global uploaded
     blob_service.create_container(username, x_ms_blob_public_access='container')
 
     #datetime gives the system's current datetime, I convert to string in order to .replace
@@ -22,11 +17,8 @@ def uploadBlob(username, file):
     time = str(datetime.datetime.now())
     timeReplaced = time.replace(':','').replace('.','').replace(' ','')
 
-    URLstring = "https://" + accountName + ".blob.core.windows.net/" + username + "/" + timeReplaced
+    URLstring = "https://" + accountName + ".blob.core.windows.net/" + username + "/" + timeReplaced + "_" + filename
 
-
-    ##for now, until we figure out how to get a file from the client, this is just a local file upload
-    global uploaded
     uploaded = False
     blob_service.put_block_blob_from_path(
         username,
@@ -35,14 +27,15 @@ def uploadBlob(username, file):
         x_ms_blob_content_type='image/png',
         progress_callback=progress_callback
         )
-    if uploaded:
-        #this is where 'time' and 'URLstring' variables
-        #will be sent off to be stored in metadata
-        
-       print("Upload Successful!")
-        
-        
     
+    #if upload is successful, return a list with the timestamp and the final URL
+    #else return an empty list
+    returnList = []
+    if uploaded:
+        return returnList[time, URLstring]
+    else:
+        return returnList
+        
 def deleteBlob(username, blobURL):
     exploded = blobURL.split("/")
     blob_service.delete_blob(username, exploded[len(exploded)-1])
@@ -69,5 +62,3 @@ def progress_callback(current, total):
     print ()
     if(current==total):
         uploaded = True
-
-main()
