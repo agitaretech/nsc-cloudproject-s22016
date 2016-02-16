@@ -15,8 +15,9 @@ self.response.out.write("""
 
 For Android, you can do it in only 4 lines
 
-var imageXhr = new XMLHttpRequest();
-imageXhr.open('GET', 'path/to/image.jpg', true);
-imageXhr.responseType = 'blob';
+var xhr = new XMLHttpRequest();
+xhr.open('POST', 'upload/binary/jpeg', true);
+xhr.setRequestHeader('Content-Type', 'image/jpeg');
+xhr.send(blob);
 
 The full instructions are found here https://ghinda.net/article/jpeg-blob-ajax-android/
