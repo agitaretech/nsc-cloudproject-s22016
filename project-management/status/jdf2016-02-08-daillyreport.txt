@@ -1,0 +1,11 @@
+What have you completed since the last report?
+
+Still working on prototype for handling blob and placing directly into storage.
+
+What do you plan to complete by the next report?
+
+I will have it finished
+
+What is getting in your way?
+
+My lack of familiarity with python

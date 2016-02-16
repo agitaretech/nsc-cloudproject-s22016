@@ -1,0 +1,11 @@
+? What have you completed since the last report?
+
+Absolutely nothing.
+
+? What do you plan to complete by the next report?
+
+I will have a good idea on what system we will use for our database, probably either Document DB or SQL Storage on Azure.
+
+? What is getting in your way?
+
+Nothing, I'm doing research online currently.
