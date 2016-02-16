@@ -1,0 +1,12 @@
+What have you completed since the last report?
+
+I've written the code necessary to delete and add images to blob storage. Met with group in person today
+and ported our code over to what will eventually be the main VM we test it all on.
+
+What do you plan to complete by the next report?
+
+I will make some tweaks and changes to my code to add some features
+
+What is getting in your way?
+
+Nothing everything is going smooth.
