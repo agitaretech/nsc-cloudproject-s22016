@@ -1,6 +1,7 @@
 from azure.storage.blob import BlobService
 import datetime
 import string
+import verify_oauth
 
 accountName = 'jesse15'
 accountKey = ''
@@ -10,6 +11,11 @@ uploaded = False
 
 def uploadBlob(username, file, filename, token, secret):
     global uploaded
+    returnList = []
+    
+    if verify_oauth(token, secret).status_code != 200:
+        return returnList["Could not verify oAuth credentials"]
+        
     blob_service.create_container(username, x_ms_blob_public_access='container')
 
     #datetime gives the system's current datetime, I convert to string in order to .replace
@@ -30,11 +36,11 @@ def uploadBlob(username, file, filename, token, secret):
     
     #if upload is successful, return a list with the timestamp and the final URL
     #else return an empty list
-    returnList = []
+
     if uploaded:
         return returnList[time, URLstring]
     else:
-        return returnList["Failure to upload to Blob Storage"]
+        return returnList["Failure to upload to Azure Blob Storage"]
         
 def deleteBlob(username, blobURL):
     exploded = blobURL.split("/")
