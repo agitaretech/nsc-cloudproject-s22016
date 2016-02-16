@@ -1,0 +1,30 @@
+RJ Hunter
+AD 440
+Date: 1/18/16
+
+What have you completed since the last report?
+
+I started to explore the documentDB documentation to better understand how NoSQL databases work.  I also looked at how to use SQL statements to pull data from a JSON modeled database.  Once I was done researching documentDB, I created a database and collection in my documentDB instance.  Once I created a collection, I was able to add JSON based documents to my database.  I created the JSON document below in my database.  This document serves as a database schema that I will share with my team, during class on Tuesday (1/19). 
+
+{
+  "photo_url”: “www.fake_image_url.com”,
+  "user_id": "1",
+  "tag": [ "fun", "scary", "horror" ],
+  "id": "d050f30a-04bb-3630-cfdd-b98a9e26dbc9"
+}
+
+This document structure includes all of the information needed to meet our database requirements.  Once I created an example document, I started to play around with queries in Azure’s documentDB portal.  I was a able to create a query that would search for an image’s url for a specific tag name and user id.  The query is below.
+
+SELECT t.photo_url, t.tag
+FROM test_data t JOIN tag IN t.tag
+WHERE tag = "fun" AND t.user_id = "1"
+
+I also looked at the Python documentation for documentDB but I haven’t created any scripts yet.  I wanted to wait and discuss the schema with my team, prior to creating any code.
+
+What do you plan to complete by the next report?
+
+I plan to discuss my schema design during our team meeting on Tuesday(1/19).  I’m hoping our team will come to a decision on the technologies we’ll use for our project.  One we decide, I’ll start researching the scripting language we’ll be using and how it interacts with the database we’ve picked. 
+
+What is getting in your way?
+
+As of right now, there isn’t anything interfering with my ability to complete milestones or project obligations.  

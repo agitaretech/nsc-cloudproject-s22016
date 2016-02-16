@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 2/12/16
+
+What have you completed since the last report?
+I don’t have a lot to report from my last update.  I’ve completed some of our API documentation for the web client.  I’ve also started to build the routes for our web framework to handle different REST calls.
+
+What do you plan to complete by the next report?
+I’m going to continue to build out the Celery Async Queue for our app.  I’m also going to finish the routes for our API.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  

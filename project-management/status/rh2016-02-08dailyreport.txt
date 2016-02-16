@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 2/8/16
+
+What have you completed since the last report?
+I created a Python package to verify OAuth credentials from Twitter.  The package includes a function that our API will use to verify user credentials and the function’s documentation.  I also created a script to generate a Twitter user token and secret, so I could test my OAuth verification function.  Once that was completed, I created a Flask App. I did this so I can start implementing my functions and testing them in an Azure virtual machine.
+
+What do you plan to complete by the next report?
+I’m going to start working with Celery (Async Queue Package for Flask) and build out an Async Queue for our app.  I’m also going to talk with the team on Tuesday and see what needs to be tackled next.  
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  
