@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 2/15/16
+
+What have you completed since the last report?
+I’ve completed the outline of our API documentation and shared it with the team.  I also built out the routing structure for our web framework to handle different REST calls.  I’ve also started to work on the methods that call our three main modules (oauth, blob services, and documentdb) for each routing method.
+
+What do you plan to complete by the next report?
+I’m going to continue to build out the routing methods that interact with our main modules.  I’m also going to continue to work on the api documentation.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  However, there are several modules that need to be built before I can finish creating a testable version of the API. 

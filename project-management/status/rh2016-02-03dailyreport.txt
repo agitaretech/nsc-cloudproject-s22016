@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 2/3/16
+
+What have you completed since the last report?
+I met with my team to discuss my research on the OAuth portion of our server side processing.  I also met with both client side groups to discuss what I needed from them in regards to Twitter OAuth credentials, when requesting JSON from our server.  I also got our FLASK framework that Baldwin built and the Twitter credentials we’re using for our app.  
+
+What do you plan to complete by the next report?
+I’m going to start developing the Python code for the OAuth check.  I’m also going to build a test page to check if the OAuth code is working.  I’m also going to start working with Celery (Async Queue Package for Flask) and build out a Async Queue for our app.
+
+What is getting in your way?
+I’m finally out of the research stage of my portion of the project, which was slowing down my development.  So, at this time, there is nothing getting in my way of completing my portion of the project for next week.

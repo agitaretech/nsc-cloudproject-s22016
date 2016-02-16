@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 2/10/16
+
+What have you completed since the last report?
+I started our API documentation for the web client.  I also started building out our application’s queue function to handle blob and database calls
+
+What do you plan to complete by the next report?
+I’m going to start working with Celery (Async Queue Package for Flask) and build out an Async Queue for our app.  I’m also building out the routes for the API to call the different Rest functions (GET, PUT, POST, DELETE). 
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  

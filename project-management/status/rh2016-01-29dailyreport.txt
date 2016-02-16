@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 1/29/16
+
+What have you completed since the last report?
+I’m continuing to work on the Python widget for tomorrow’s meeting with my team.  I’m also looking at the documentation Toddy sent for Web APIs.
+
+What do you plan to complete by the next report?
+Our team is going to meet on Saturday(1/30).  I plan to finish my widget that connects Python to documentDB by Saturday to share with the team.  
+
+What is getting in your way?
+There is nothing at this time that is inferring with me contributing to the project.
