@@ -13,7 +13,10 @@ self.response.out.write("""
 )
 
 
-As for how to do it on Android, it's a bit more complicated since most 
-tutorials walk through the Azure SDK for Android. The best link I've found so far is here 
+For Android, you can do it in only 4 lines
 
-https://azure.microsoft.com/en-us/documentation/articles/mobile-services-android-upload-data-blob-storage/
+var imageXhr = new XMLHttpRequest();
+imageXhr.open('GET', 'path/to/image.jpg', true);
+imageXhr.responseType = 'blob';
+
+The full instructions are found here https://ghinda.net/article/jpeg-blob-ajax-android/
