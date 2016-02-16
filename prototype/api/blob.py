@@ -34,7 +34,7 @@ def uploadBlob(username, file, filename, token, secret):
     if uploaded:
         return returnList[time, URLstring]
     else:
-        return returnList
+        return returnList["Failure to upload to Blob Storage"]
         
 def deleteBlob(username, blobURL):
     exploded = blobURL.split("/")
