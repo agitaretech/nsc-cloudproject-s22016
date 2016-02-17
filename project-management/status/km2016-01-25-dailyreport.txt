@@ -1,0 +1,40 @@
+Name: Kianoush Moradian
+Report:  1-25-2016
+
+
+
+* What have you completed since the last report?
+I have completed file upload since my last report.
+Now user is able to select an image OR drag and drop it in 
+upload.html file.  
+
+Here is the link you can check it on my personal Hosting space
+
+http://www.webolife.com/test4/upload.html
+
+To see whether it is uploaded or not check this file 
+http://www.webolife.com/test4/show.php
+
+or this path 
+http://www.webolife.com/test4/uploads/
+
+
+
+* What do you plan to complete by the next report?
+I need to find a way to just choose images to upload. Hopefully everything is done 
+till ending this week. 
+Also I need to talk to my team members to see what they have completed to 
+merge with the rest of files. 
+
+
+* What is getting in your way?
+AngularJS is new to me. I have to use lots of js and css libraries which 
+I have no idea about them. It takes lots of my time to find them, 
+merge them with my default codes, and test them out.
+
+
+
+
+
+-----
+

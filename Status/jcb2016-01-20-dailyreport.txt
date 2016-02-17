@@ -1,5 +1,0 @@
-Mobile Client group: Joaquin Bautista
-1. We have merged our coded parts into the application except Brandon's camera feature.
-2. The Google plus bug where an account popup displays on which account to select from and it doesn't let us go back to the login page is what we need to fix.
-3. Our plan is to do pass our API keys and secrets to the home activity when we login from each of the social media logins, merge Brandon's camera feature and
-continue our research and prototyping.

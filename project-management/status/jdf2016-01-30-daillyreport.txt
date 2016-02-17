@@ -1,0 +1,11 @@
+What have you completed since the last report?
+
+Made a bunch of progress towards generating unique URLs for our blobs
+
+What do you plan to complete by the next report?
+
+I will hopefully have a script that can take in a file stream for uploading to the blob, and also have some kind of unique URL generation for each blob
+
+What is getting in your way?
+
+Learning python

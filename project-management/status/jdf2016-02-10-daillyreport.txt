@@ -1,0 +1,11 @@
+What have you completed since the last report?
+
+We've changed our design and this new strategy will involve taking a blob object from the UI teams and uploading directly with that.
+
+What do you plan to complete by the next report?
+
+I will develop an outline for the UI teams to use so they can send a blob image.
+
+What is getting in your way?
+
+I haven't come up with the proper way of doing it with each language.

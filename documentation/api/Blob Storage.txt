@@ -1,0 +1,19 @@
+These are instructions on how exactly the image file should be sent over to the server so we can upload into blob storage.
+This should be sufficient for the Web UI team since it's in JS.
+
+# To upload files to blob storage, the request method must be "POST"
+# and enctype must be set to "multipart/form-data".
+self.response.out.write("""
+	<html><body>
+	<form action="{0}" method="POST" enctype="multipart/form-data">
+ 	 Upload File: <input type="file" name="file"><br>
+ 	 <input type="submit" name="submit" value="Submit">
+	</form>
+	</body></html>""".format(upload_url)
+)
+
+
+As for how to do it on Android, it's a bit more complicated since most 
+tutorials walk through the Azure SDK for Android. The best link I've found so far is here 
+
+https://azure.microsoft.com/en-us/documentation/articles/mobile-services-android-upload-data-blob-storage/
