@@ -1,0 +1,11 @@
+What have you completed since the last report?
+
+My portion of the Blob Service functionality is all but complete. uploadBlob and deleteBlob work just fine.
+
+What do you plan to complete by the next report?
+
+I will add comments and test cases to my code
+
+What is getting in your way?
+
+I need to setup the flask server and run some test cases.
