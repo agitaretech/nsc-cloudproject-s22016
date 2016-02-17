@@ -4,17 +4,17 @@ Report:  2-17-2016
 
 
 * What have you completed since the last report?
+Yesterday I had meeting with other team members in class. We analyze the latest in progress work. Talked to R.J. and worked on the issue I had on sending tags. It is not fixed yet. Today I am going to take some time and work on that as well. 
 
 
 * What do you plan to complete by the next report?
-
+By the next week, I plan to figure out why AngularJS does not work when I want to send a text (HTTP POST). Also our team tries to finish display page. Hopefully we can make it as well. Ksenia works on this part.
 
 * What is getting in your way?
+AngularJS post tag does not work and does not give me any error. I am struggling with that now.
 
 
 
 
 
 
-
-------------------------------> This status report will be completed on due date
