@@ -46,7 +46,7 @@ def uploadBlob(username, file, filename, token, secret):
         return returnList["failure to upload to Azure Blob Storage"]
         
 def deleteBlob(username, blobURL, token, secret):
-
+    username = username.lower()
     if verify_oauth(token, secret) != 200:
         returnList = ["could not verify oAuth credentials"]
         return returnList
