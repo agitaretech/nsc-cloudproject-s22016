@@ -4,12 +4,13 @@ Report:  2-10-2016
 
 
 * What have you completed since the last report?
-
+Since the last report I read about OAuth and the way we can help Dev team to accomplish twitter login access.  
 
 * What do you plan to complete by the next report?
-
+I have got an email from Ian and he asked us to set everything based on _POST & _GET. I should check out our work to see if there is anything to do in this case. Also I would like to go for a simple version of uploading image and tagging them. I have no idea for now and need to do some research about it.
 
 * What is getting in your way?
+Just having multiple classes in this quarter put lots of pressure on me. I need to do their assignments as well. 
 
 
 
@@ -17,4 +18,3 @@ Report:  2-10-2016
 
 
 
-------------------------------> This status report will be completed on due date

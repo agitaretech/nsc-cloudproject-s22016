@@ -1,0 +1,13 @@
+What have you completed since the last report?
+
+I've added functionality and made modules out of both blobUpload and deleteBlob functions.
+Can currently delete blobs, but still looking into the correct parameter that will be
+accepted for the blobUpload function. Also looking into the callback functionality
+
+What do you plan to complete by the next report?
+
+I will have the callback and blob upload completed
+
+What is getting in your way?
+
+Testing it on a virtual server.

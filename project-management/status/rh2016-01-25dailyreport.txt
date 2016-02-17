@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 1/25/16
+
+What have you completed since the last report?
+I did more research on connecting documentDB to Python.  A lot of the tutorials and documentation pointed towards using FLASK as a web framework with documentDB and Python.
+
+What do you plan to complete by the next report?
+I plan to share my research with my team. I also plan to finish my widget that connects Python to documentDB.
+
+What is getting in your way?
+As I’m doing more research, I have more questions about the stack we chose.  For example, the web framework FLASK works well with Python and documentDB but we choose Tornado.  So, I need to do more research on how we are going to use Tornado with documentDB.  This is not an issue, it just requires more research.

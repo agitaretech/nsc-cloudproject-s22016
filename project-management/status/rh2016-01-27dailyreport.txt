@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 1/27/16
+
+What have you completed since the last report?
+Our team decided to use FLASK as a web framework to work with Python.  We choose FLASK because there was more documentation provided by Azure.  I started to research auto incrementing behavior with documentDB and created a Python widget to connect with our test database. 
+
+What do you plan to complete by the next report?
+Our team is going to meet on Saturday(1/30).  I plan to finish my widget that connects Python to documentDB by Saturday to share with the team.
+
+What is getting in your way?
+There is nothing at this time that is inferring with me contributing to the project.
