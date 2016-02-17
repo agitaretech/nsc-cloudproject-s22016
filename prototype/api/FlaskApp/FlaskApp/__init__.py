@@ -1,14 +1,14 @@
 from flask import Flask
 from flask import request
-import tasks
 
 app = Flask(__name__)
 
 
-@app.route("/getImage", methods=['GET'])
+@app.route("/getImages", methods=['GET'])
 def getImage():
-        
-    return request.args.get('email')
+    rtnJson = getImages()
+    return rtnJson;
+    #return request.args.get('email')
     
 
 @app.route("/uploadImage", methods=['GET','POST'])

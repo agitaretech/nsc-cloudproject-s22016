@@ -3,14 +3,15 @@ import datetime
 import string
 from verify_oauth import verify_oauth
 
-accountName = 'jesse15'
-accountKey = ''
+accountName = 'ad440rjh'
+accountKey = 'hUF+a6xRcDXOgQ+xi3HN5jF6o6citVvEfCKB5FVQlHDSWdh+LXKgzvuMVf/QHTzdQU49BMFpmozdzdNt0KxdKQ=='
 
 blob_service = BlobService(accountName, accountKey)
 uploaded = False
 
 def uploadBlob(username, file, filename, token, secret):
     global uploaded
+    username = username.lower()
     returnList = []
     if verify_oauth(token, secret) != 200:
         returnList = ["could not verify oAuth credentials"]
@@ -21,15 +22,15 @@ def uploadBlob(username, file, filename, token, secret):
     #datetime gives the system's current datetime, I convert to string in order to .replace
     #characters that wouldn't work in a URL like ':','.', and ' '
     time = str(datetime.datetime.now())
-    timeReplaced = time.replace(':','').replace('.','').replace(' ','')
+    timeReplaced = time.replace(':','').replace('.','').replace(' ','') + "_" + filename
 
-    URLstring = "https://" + accountName + ".blob.core.windows.net/" + username + "/" + timeReplaced + "_" + filename
+    URLstring = "https://" + accountName + ".blob.core.windows.net/" + username + "/" + timeReplaced 
 
     uploaded = False
     blob_service.put_block_blob_from_path(
         username,
         timeReplaced,
-        '/Users/rjhunter/GitHub/nsc-cloudproject-s22016/api/verify_oauth\\ \\&\\ blob/bridge.jpg',
+        '/Users/rjhunter/Desktop/bridge.jpg',
         x_ms_blob_content_type='image/png',
         progress_callback=progress_callback
         )
@@ -38,7 +39,9 @@ def uploadBlob(username, file, filename, token, secret):
     #else return an empty list
 
     if uploaded:
-        return returnList[time, URLstring]
+        returnList = [time, URLstring]
+        print(username)
+        return returnList
     else:
         return returnList["failure to upload to Azure Blob Storage"]
         

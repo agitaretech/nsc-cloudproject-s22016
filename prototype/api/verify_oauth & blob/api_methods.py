@@ -23,7 +23,7 @@ def updateTags(blobURL, tags, username, token, secret):
     return null
 
 def main():
-    print(uploadImage('fred', 'fun', 'filename','4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR','BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF','fun'))
+    print(uploadImage('TKJR  E', 'fun', 'Todd','4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR','BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF','fun'))
 
 # call main
 if __name__ == "__main__":
