@@ -1,0 +1,14 @@
+RJ Hunter
+AD 440
+Date: 2/17/16
+
+What have you completed since the last report?
+I created a Python file that handles our API calls(getImages/GET, deleteImage/DELETE, uploadImage/POST, updateTags/PUT).  This file utilizes the Python methods we’ve created to handle calls to oauth, blob services, and documentDB.  This file will serve as a bridge between our main Flask Python file and the Python files for the services (oauth, blob, documentDB) we utilize. 
+
+I also discussed with our team what is needed to complete our prototype. 
+
+What do you plan to complete by the next report?
+I plan to clean up the methods in the main Flask file and the API method file.  I also plan to create a JSON handler method so we can return JSON during API calls.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  However, there are several modules that need to be built before I can finish creating our API prototype.
