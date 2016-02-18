@@ -1,0 +1,15 @@
+AD440
+2/17/16
+
+Status Report 17:
+
+1) I completed getting the last object of the array in the JSON object.
+   This is needed to send to the server side so they know where to start
+   feedings us more objects starting from the last one received.   
+   
+
+2) Now figuring out how to send this information to server side. 
+
+3  Still working on adding tags to files and searching by tags.  
+   I am researching how to search by tags and twitter login. 
+   
