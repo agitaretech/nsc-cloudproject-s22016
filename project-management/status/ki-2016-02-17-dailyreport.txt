@@ -1,10 +1,8 @@
 What have you completed since the last report?
--created a modular structure for angular
--researched the CRUD with angular
--prototyped bootstrap templates
+>started doing routing 
 
 What do you plan to complete by the next report?
--I plan to add CRUD methods to a service module in app.js
+>Kepp implementing CRUD, finish routing, comply templates
 
 What is getting in your way?
--a lot to do, very hard to debug javascript - browser caches stuff
+>I will talk to my team about merging because we write separatly so far

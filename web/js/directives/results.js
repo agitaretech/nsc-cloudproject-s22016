@@ -1,10 +1,10 @@
 
 
-app.controller('resultsController', 
+module.controller('resultsController', 
 
  function($scope, $http) {
 	 
-  $http({method: 'GET', url: 'postsproto.json'}).success(function(data) {
+$http({method: 'GET', url: 'postsproto.json'}).success(function(data) {
 $scope.posts = data;
  $scope.pickedImage = {
         url: ""
