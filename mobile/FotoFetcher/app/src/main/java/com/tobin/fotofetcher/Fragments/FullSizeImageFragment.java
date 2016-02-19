@@ -39,6 +39,7 @@ public class FullSizeImageFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        Log.d("fullsize", "in onCreateView");
         return inflater.inflate(R.layout.fragment_full_size_photo, container, false);
     }
 

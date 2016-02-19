@@ -44,16 +44,26 @@ public class HomeActivity extends AppCompatActivity implements Interface {
         AsyncObjectList objectList = AsyncObjectList.getInstance();
         list = objectList.getList();
         if (savedInstanceState != null) {
+            Log.d("home", "bundle not null");
             this.fragState = savedInstanceState.getInt("fragState");
+            listFrag = (ListViewFragment) fragManager.findFragmentByTag("listFrag");
+            fullFrag = (FullSizeImageFragment) fragManager.findFragmentByTag("photoFrag");
+
+        } else {
+            Log.d("home", "bundle is null");
+            listFrag = new ListViewFragment();
+            fullFrag = new FullSizeImageFragment();
+            fragManager.beginTransaction().replace(R.id.list_fragment_container, listFrag, "listFrag").commit();
+            fragManager.beginTransaction().replace(R.id.photo_fragment_container, fullFrag, "photoFrag").commit();
         }
 
 
 
-        listFrag = new ListViewFragment();
-        fullFrag = new FullSizeImageFragment();
+//        listFrag = new ListViewFragment();
+//        fullFrag = new FullSizeImageFragment();
         listFrag.setList(list);
-        fragManager.beginTransaction().replace(R.id.list_fragment_container, listFrag, "listFrag").commit();
-        fragManager.beginTransaction().replace(R.id.photo_fragment_container, fullFrag, "photoFrag").commit();
+//        fragManager.beginTransaction().replace(R.id.list_fragment_container, listFrag, "listFrag").commit();
+//        fragManager.beginTransaction().replace(R.id.photo_fragment_container, fullFrag, "photoFrag").commit();
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT && fragState == 1) {
             fragManager.beginTransaction().show(listFrag).commit();
