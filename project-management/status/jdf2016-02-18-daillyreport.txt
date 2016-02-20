@@ -1,0 +1,11 @@
+What have you completed since the last report?
+
+Researching how to do proper test cases on Python. Working on commenting the rest of my code.
+
+What do you plan to complete by the next report?
+
+I will have some test cases complete and code will be fully commented.
+
+What is getting in your way? 
+
+The process on how to run test cases in python.
