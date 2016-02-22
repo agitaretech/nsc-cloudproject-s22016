@@ -1,0 +1,41 @@
+<head> 
+<script src="js/angular.js"></script>
+
+<script>
+
+
+function PostsCtrlAjax($scope, $http)
+
+{
+
+$http({method: 'POST', url: 'js/postsproto.json'}).success(function(data) {
+$scope.posts = data;
+});
+
+}
+
+
+
+</script>
+<body >
+<h1>Prototype to grab last element of JSON Object</h1>
+
+   
+<div id="ng-app" ng-app ng-controller="PostsCtrlAjax">  
+
+<h2>   {{posts[posts.length-1].file_name}}</h2>
+<h2>  didn't work </h2> 
+
+</div>
+
+</body>
+
+
+
+
+
+
+
+
+
+</html>
