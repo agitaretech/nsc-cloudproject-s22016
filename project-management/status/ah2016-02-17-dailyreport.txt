@@ -1,14 +1,15 @@
 AD440
-2/17/16
+2/19/16
 
-Status Report 17:
+Status Report 18:
 
-1) I completed getting the last object of the array in the JSON object.
-   This is needed to send to the server side so they know where to start
-   feedings us more objects starting from the last one received.   
+1) Now completed getting the last object of the array in the JSON object
+   I am working on sending at HTTP request POST to the server side with that
+   variable.
+ 
    
 
-2) Now figuring out how to send this information to server side. 
+2) In the proccess of figuring out how to send the HTTP request POST to server.
 
 3  Still working on adding tags to files and searching by tags.  
    I am researching how to search by tags and twitter login. 
