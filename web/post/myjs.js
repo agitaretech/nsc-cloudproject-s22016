@@ -1,0 +1,30 @@
+var app = angular.module('myApp', []);
+
+app.controller('FormCtrl', function ($scope, $http) {
+
+var formData = {
+	fileName: "default",
+    tag1: "default",
+    tag2: "default",
+    tag3: "default",
+    
+};
+
+
+$scope.submitForm = function() {
+
+    $http({
+
+        url: "myform.php",
+        data: $scope.form,
+        method: 'POST',
+        headers : {'Content-Type':'application/x-www-form-urlencoded; charset=UTF-8'}
+
+    }).success(function(data){
+
+        console.log("OK", data)
+
+    }).error(function(err){"ERR", console.log(err)})
+};
+
+});
