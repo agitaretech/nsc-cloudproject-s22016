@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 2/22/16
+
+What have you completed since the last report?
+I cleaned up the methods in the main Flask app file and the api_method file.  Both files are almost complete, I’m just waiting on the additional files to call documentdb for deleting metadata, updating tags, and getting images.  I completed the main Flask file’s routing functionality and it now serves JSON pages for each api call.  I also put the standard JSON returns and API keys into their own files.  This allows for modularity when transferring the app to a different servers.  
+
+What do you plan to complete by the next report?
+I plan to continue cleaning up the app by putting different files into their own folders to make the application more modular.  I also plan to implement the remaining documentdb functions into the application.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  However, there are several modules that need to be built before I can finish creating our API prototype.
