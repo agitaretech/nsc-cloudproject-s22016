@@ -1,0 +1,15 @@
+AD440
+2/15/16
+
+Status Report 16:
+
+1) I am working on turning a JSON OBject into an array.  
+   
+
+2) Researching what I mentioned above, JSON object -> array.
+   I have just received a new mark up JSON file from
+   the back end team and will begin integrating that into my prototype
+   code. 
+3  Still working on adding tags to files and searching by tags.  
+   I am researching how to search by tags and twitter login. 
+   
