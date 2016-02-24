@@ -33,6 +33,13 @@
             android:layout_gravity="center_horizontal"
             android:orientation="vertical"></LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/add_tag_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical"></LinearLayout>
+
     </ScrollView>
 </LinearLayout>
 

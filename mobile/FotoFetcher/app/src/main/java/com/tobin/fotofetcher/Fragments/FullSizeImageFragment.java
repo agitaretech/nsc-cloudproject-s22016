@@ -146,6 +146,7 @@ public class FullSizeImageFragment extends Fragment {
                 displayAlertDialogToAddTag();
             }
         });
+        ll = (LinearLayout) getActivity().findViewById(R.id.add_tag_Container);
         ll.addView(btn);
     }
 

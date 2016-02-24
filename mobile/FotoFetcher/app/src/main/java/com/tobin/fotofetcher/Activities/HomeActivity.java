@@ -49,7 +49,8 @@ public class HomeActivity extends AppCompatActivity implements Interface {
             listFrag = (ListViewFragment) fragManager.findFragmentByTag("listFrag");
             fullFrag = (FullSizeImageFragment) fragManager.findFragmentByTag("photoFrag");
 
-        } else {
+        }
+        else {
             Log.d("home", "bundle is null");
             listFrag = new ListViewFragment();
             fullFrag = new FullSizeImageFragment();
@@ -147,9 +148,9 @@ public class HomeActivity extends AppCompatActivity implements Interface {
             fragManager.beginTransaction().show(listFrag).commit();
             fragManager.beginTransaction().hide(fullFrag).commit();
         }
-
-
-
+        if (popupWindow != null){
+            popupWindow.dismiss();
+        }
 
     }
 
