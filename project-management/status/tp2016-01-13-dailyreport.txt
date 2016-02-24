@@ -1,0 +1,19 @@
+1.  What did you accomplish since last report?
+
+    So far, our mobile team came up with an outline of the project based off of Toddy's wireframe design. We have split the project into for parts, one part for each person in the group:
+
+    JC will take on the task of implementing social media login. 
+
+    Brandon is in charge of uploading photos. This includes the option of capturing a photo with the hardware camera, or selecting a picture from the device's storage. 
+
+    Stephen and I have split the UI build, photo select, and tag editing into two parts. I am responsible for developing the application in portrait mode and he is doing the landscape view. 
+
+
+2.  What issues did you have?
+
+    We don't have any known issues yet, only unknowns. Some research is still do be done for accessing the phones camera and also for creating the hooks to tie into the database team's development. 
+
+
+3.  What are you going to accomplish next?
+
+    By the next milestone I will have the portrait mode UI done and research done on for searching through the user's existing photos by their tag name.
