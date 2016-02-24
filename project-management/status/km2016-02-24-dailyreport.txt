@@ -4,17 +4,14 @@ Report:  2-24-2016
 
 
 * What have you completed since the last report?
-
+Done with our team presentation. Also finished AngularJS form HTTP POST page. I had meeting with web UI team and each one of us updated each other about the latest project situation. 
 
 * What do you plan to complete by the next report?
-
+I am planning to merge image upload page and Tag Post page. I may go for submitting one image pare each request. Let’s see.. 
 
 * What is getting in your way?
+My only concern is how UI team is able to test out the outcome. Dev team is doing great job but on the other hand forcing us to do something the way they like is not acceptable. As a REST developers, they need to make it simple to use with the most convenient usage possible. If Dev team turns everything late and leaves us just one week to finish the rest of UI work, we probably face to problems. 
 
 
 
 
-
-
-
-------------------------------> This status report will be completed on due date
