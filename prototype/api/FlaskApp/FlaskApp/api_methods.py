@@ -35,8 +35,9 @@ def getImagesJSON(timestamp, tags, username, token, secret):
     oauth_verify_code = verifyOauth(token, secret)
     if oauth_verify_code != 200:
         return oauth_error_json
-    
-    return "get_images_placeholder"
+
+    rtnJSON = {'imgs' : 'get_images_placeholder'}
+    return rtnJSON
 
 def updateTagsJSON(blobURL, tags, username, token, secret):
     oauth_verify_code = verifyOauth(token, secret)
@@ -47,7 +48,9 @@ def updateTagsJSON(blobURL, tags, username, token, secret):
 
 def main():
     print(uploadImageJSON('fin', '/Users/rjhunter/Desktop/bridge.jpg', 'Todd','4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR','BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF','fun'))
-    print(deleteImageJSON('fin', "https://ad440rjh.blob.core.windows.net/fin/2016-02-21130446459836_Todd",'4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR','BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF'))
+    #print(deleteImageJSON('fin', "https://ad440rjh.blob.core.windows.net/fin/2016-02-21130446459836_Todd",'4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR','BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF'))
+    #print(getImagesJSON('10/2/15 4:40AM',['fun','luck'], 'fred','4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR','BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF'))
+    #print(updateTagsJSON("www.blob.com", ['fun','luck'],'fred','4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR','BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF'))
 
 
 # call main

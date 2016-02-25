@@ -13,7 +13,7 @@ def getImages():
     username = request.args.get('username')
     token = request.args.get('token')
     secret = request.args.get('secret')
-    
+    #prev parameter
     rtn_json = getImagesJSON(timestamp, tags, username, token, secret)
     return jsonify(request=rtn_json)
 
@@ -35,7 +35,7 @@ def deleteImage():
     blobURL = request.args.get('blobURL')
     token = request.args.get('token')
     secret = request.args.get('secret')
-    
+    #remove username
     rtn_json = deleteImageJSON(username, blobURL, token, secret)
     return jsonify(request=rtn_json)
 
@@ -46,6 +46,7 @@ def updateTags():
     username = request.args.get('username')
     token = request.args.get('token')
     secret = request.args.get('secret')
+    #remove username
     
     rtn_json = updateTagsJSON(blobURL, tags, username, token, secret)
     return jsonify(request=rtn_json)
