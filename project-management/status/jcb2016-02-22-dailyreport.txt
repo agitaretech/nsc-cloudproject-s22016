@@ -1,0 +1,4 @@
+Mobile Client group: Joaquin Bautista
+1. I still have the code for the blob but the DB is not implemented but the saved instance state for the tags are now working.
+2. No change.
+3. Our plan is to further implement the blob stream for the image. 
