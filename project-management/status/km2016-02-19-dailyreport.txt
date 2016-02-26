@@ -1,20 +1,9 @@
-Name: Kianoush Moradian
-Report:  2-19-2016
-
-
-
 * What have you completed since the last report?
-
+I had meeting with our group yesterday night. Everybody talked about their accomplishments and concerns. Also, I worked on HTTP Post text based on AngularJS framework. 
 
 * What do you plan to complete by the next report?
-
+Ksenia is working on restructuring and merging files. I need to help her to do so. Also I need to spend more time on HTTP Post. 
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+I am not able to see the $HTTP Post result since it depends on the server side. I tried some PHP but did not work. 
+I need to work on that. 
