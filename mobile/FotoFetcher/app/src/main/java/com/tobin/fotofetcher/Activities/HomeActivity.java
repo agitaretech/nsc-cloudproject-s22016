@@ -20,75 +20,69 @@ import com.android.volley.toolbox.ImageLoader;
 import com.android.volley.toolbox.NetworkImageView;
 
 import com.tobin.fotofetcher.R;
-import com.tobin.fotofetcher.RecyclerViewStuff.DataObject;
 
-import java.util.ArrayList;
+
 
 public class HomeActivity extends AppCompatActivity implements Interface {
     FragmentManager fragManager = getSupportFragmentManager();
     FullSizeImageFragment fullFrag;
     ListViewFragment listFrag;
     private int fragState = 1;
-    private DataObject object;
-    private int position = 0;
+    AsyncObjectList objectList;
+    int position = 0;
 
     //TextView object
     private TextView textViewUsername;
-
-    private ArrayList<DataObject> list;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-        AsyncObjectList objectList = AsyncObjectList.getInstance();
-        list = objectList.getList();
-        if (savedInstanceState != null) {
-            Log.d("home", "bundle not null");
-            this.fragState = savedInstanceState.getInt("fragState");
-            listFrag = (ListViewFragment) fragManager.findFragmentByTag("listFrag");
-            fullFrag = (FullSizeImageFragment) fragManager.findFragmentByTag("photoFrag");
+        objectList = AsyncObjectList.getInstance();
 
-        }
-        else {
-            Log.d("home", "bundle is null");
+        if (savedInstanceState != null) {
+            this.fragState = savedInstanceState.getInt("fragState");
+            listFrag=(ListViewFragment) fragManager.findFragmentByTag("listFrag");
+            fullFrag=(FullSizeImageFragment) fragManager.findFragmentByTag("photoFrag");
+
+        }else{
             listFrag = new ListViewFragment();
             fullFrag = new FullSizeImageFragment();
             fragManager.beginTransaction().replace(R.id.list_fragment_container, listFrag, "listFrag").commit();
             fragManager.beginTransaction().replace(R.id.photo_fragment_container, fullFrag, "photoFrag").commit();
+
         }
-
-
-
-//        listFrag = new ListViewFragment();
-//        fullFrag = new FullSizeImageFragment();
-        listFrag.setList(list);
-//        fragManager.beginTransaction().replace(R.id.list_fragment_container, listFrag, "listFrag").commit();
-//        fragManager.beginTransaction().replace(R.id.photo_fragment_container, fullFrag, "photoFrag").commit();
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT && fragState == 1) {
             fragManager.beginTransaction().show(listFrag).commit();
             fragManager.beginTransaction().hide(fullFrag).commit();
+            Log.d("show", "in home");
+
         } else {
             fragManager.beginTransaction().hide(listFrag).commit();
             fragManager.beginTransaction().show(fullFrag).commit();
+            Log.d("show", "in home");
+
         }
 
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
             fragManager.beginTransaction().show(listFrag).commit();
             fragManager.beginTransaction().show(fullFrag).commit();
+            Log.d("show", "in home");
+
 
         }
 
         if (textViewUsername != null)
             retrieveTwitterLogin();
+
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putInt("position", position);
         outState.putInt("fragState", fragState);
+        outState.putInt("position",fragState);
     }
 
     public void retrieveTwitterLogin() {
@@ -136,36 +130,25 @@ public class HomeActivity extends AppCompatActivity implements Interface {
     }
 
     @Override
-    protected void onResume() {
-        super.onResume();
-
-    }
-
-    @Override
     public void onBackPressed() {
-        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+        if (FullSizeImageFragment.popupWindow != null){
+            Log.d("home", "popup image not null ");
+            FullSizeImageFragment.popupWindow.dismiss();
+        }
+
+        else if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             fragState = 1;
             fragManager.beginTransaction().show(listFrag).commit();
             fragManager.beginTransaction().hide(fullFrag).commit();
         }
-        if (popupWindow != null){
-            popupWindow.dismiss();
-        }
 
     }
 
-
     @Override
-//    public void itemClicked (int position, String name, String tags, String url){
     public void itemClicked(int position) {
-//   fullFrag.setImageAttributes(name, tags, url, position);
 
-        this.position = position;
 
-        object = list.get(position);
-        if (object == null)
-            object = new DataObject("No pictures available", "", "");
-        fullFrag.setObject(object, position);
+
         if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
             fragManager.beginTransaction().hide(listFrag).commit();
             fragManager.beginTransaction().show(fullFrag).commit();
@@ -174,27 +157,19 @@ public class HomeActivity extends AppCompatActivity implements Interface {
             fragManager.beginTransaction().show(listFrag).commit();
             fragManager.beginTransaction().show(fullFrag).commit();
         }
+
+        this.position=position;
+        fullFrag.setObject(position);
+        Log.d("click", "in home");
+
+
     }
 
     @Override
-    public void updateTag(DataObject object, int position) {
+    public void updateTag(int position) {
 
-        list.remove(position);
-        list.add(position, object);
+        listFrag.updateRecyclerView(position);
 
-        listFrag.updateListViewObject(object, position);
-
-//        list.get(objectPosition).setTags(tags);
-//        if (getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE) {
-//            fragManager.beginTransaction().show(listFrag).commit();
-//            fragManager.beginTransaction().show(fullFrag).commit();
-//            listFrag = new ListViewFragment();
-//            listFrag.setList(list);
-//            fragManager.beginTransaction().replace(R.id.list_fragment_container,listFrag,"listFrag").commit();
-//        }
     }
-
-
-
 
 }

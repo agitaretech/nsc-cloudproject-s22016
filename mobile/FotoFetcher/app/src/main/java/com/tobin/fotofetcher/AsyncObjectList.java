@@ -1,6 +1,7 @@
 package com.tobin.fotofetcher;
 
 import android.provider.ContactsContract;
+import android.util.Log;
 
 import com.tobin.fotofetcher.RecyclerViewStuff.DataObject;
 
@@ -16,11 +17,13 @@ public class AsyncObjectList {
 
     private AsyncObjectList (){
         dummyData = fillDummyData();
+
     }
 
     public static AsyncObjectList getInstance(){
-        if (instance == null)
-            return new AsyncObjectList();
+        if (instance == null) {
+            instance = new AsyncObjectList();
+        }
         return instance;
     }
 
@@ -35,6 +38,10 @@ public class AsyncObjectList {
     public void updateObject(int position, DataObject object){
         dummyData.remove(position);
         dummyData.add(position, object);
+    }
+
+    public void removeObject(int position){
+
     }
 
     public void updateList(ArrayList<DataObject> list){
