@@ -1,20 +1,20 @@
+
 Name: Kianoush Moradian
 Report:  2-22-2016
 
 
 
 * What have you completed since the last report?
-
+Eventually I fixed the HTTP POST issue on my form. Now I am able to send filename and tag names by submitting a form. 
 
 * What do you plan to complete by the next report?
-
+I am planning to merge this form with upload file. I may change the upload file to send (http post) one image on each HTTP Post to make it simple and functional.
 
 * What is getting in your way?
+Since I work on client side (UI), testing actions is hard. I need to take some time to create required PHP file and test my work out.
 
 
 
 
 
 
-
-------------------------------> This status report will be completed on due date
