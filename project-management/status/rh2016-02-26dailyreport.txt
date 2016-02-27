@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 2/26/16
+
+What have you completed since the last report?
+I haven’t completed a lot from my last update.  I plan to finish my piece of the project this weekend.
+
+What do you plan to complete by the next report?
+I plan to continue cleaning up the app by putting different files into their own folders to make the application more modular.  I also plan to implement the remaining documentdb functions into the application.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  However, there are several modules that need to be built before I can finish creating our API prototype.
