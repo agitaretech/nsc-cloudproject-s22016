@@ -1,0 +1,26 @@
+Name: Kianoush Moradian
+Report:  1-22-2016
+
+
+
+* What have you completed since the last report?
+All html pages are done. Some AngularJS tags have been added to our template.
+
+
+* What do you plan to complete by the next report?
+I plan to finish uplouding part of our UI. I am now testing some codes 
+which I have found on internet to see which one works the best for us.
+
+* What is getting in your way?
+Uplouding needs to have both client side and server side codings. 
+It is hard to test it out without touching severside codings. 
+I am now writing PHP code to get the request from my browser and save the 
+
+
+
+
+
+
+
+
+

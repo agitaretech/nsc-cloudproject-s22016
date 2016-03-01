@@ -1,0 +1,13 @@
+1.  What have you completed since the last report?
+    
+    Still Looking into async services.
+
+2.  What do you plan to complete by the next report?
+    
+    Look into which service to use for handling async calls.  Probably either volley or
+    Retrofit.
+
+3.  What is getting in your way?
+
+    No issues.  
+

@@ -1,0 +1,4 @@
+Mobile Client group: Joaquin Bautista
+1. The implemented save state for the edited tags is still working only on the console log.
+2. We have a transform bug that we need to fix because the app is not running at the moment.
+3. Our plan is to do fix up the bug for the save state for the button to display edited text and the transform bug. 

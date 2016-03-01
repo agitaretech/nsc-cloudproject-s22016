@@ -1,0 +1,17 @@
+AD440
+2/10/16
+
+Status Report 14:
+
+1) I am in the process of researching how to convert the JSON file
+   into a JSON Object and then turn that Object into an array.  
+   Also, I attempted cleaning up the Master fork by deleting all my status
+   reports and have reorganized my fork according to Toddy's specifiactions. 
+
+2) Researching what I mentioned above, JSON object -> array.
+   I have just received a new mark up JSON file from
+   the back end team and will begin integrating that into my prototype
+   code. 
+3  Still working on adding tags to files and searching by tags.  
+   I am researching how to search by tags and twitter login. 
+   

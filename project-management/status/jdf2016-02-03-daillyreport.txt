@@ -1,0 +1,12 @@
+What have you completed since the last report?
+
+I've researched how we will take a either a blob object or a byte array and put that object directly into blob storage
+
+What do you plan to complete by the next report?
+
+Hopefully I will have a working solution on how to take an image and put it directly on blob storage without having to 
+keep it in a local directoy first.
+
+What is getting in your way?
+
+I've never done this before, and documentation on it isn't exactly abundant.

@@ -1,0 +1,13 @@
+1.  What have you completed since the last report?
+    
+    I have begun research on adding a swipe feature to each item in the list in order
+    to delete that item.
+
+2.  What do you plan to complete by the next report?
+    
+    I will continue research and begin implementation.
+
+3.  What is getting in your way?
+
+    No issues.
+

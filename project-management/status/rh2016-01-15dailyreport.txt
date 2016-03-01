@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 1/15/16
+
+What have you completed since the last report?
+I created a documentDB database instance in my Azure account to learn more about the database.  I also downloaded the Python library that interacts with documentDB and started to look at the included documentation.  
+
+What do you plan to complete by the next report?
+I’m going to build out a sample schema in documentDB for our meeting on Tuesday.  I’m also going to build a small Python application that connects to the database and executes a simple query.  This will help me better understand how Python interacts with documentDB.
+
+What is getting in your way?
+As of right now, there isn’t anything interfering with my ability to complete milestones or project obligations.

@@ -1,0 +1,12 @@
+1.  What have you completed since the last report?
+    
+    Made the image itself clickable so that it enlarges to full size.
+
+2.  What do you plan to complete by the next report?
+    
+    Make the background black when the photo is in full screen.
+
+3.  What is getting in your way?
+
+    No issues.  
+

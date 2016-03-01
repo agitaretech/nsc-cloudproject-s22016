@@ -1,0 +1,5 @@
+Mobile Client group: Joaquin Bautista
+1. We have merged Brandon Heinrich's camera functions with the application but has minor bugs.
+2. We have commented out all of the Facebook and Google Plus functions and just focused on the functioning Twitter login because it is time consuming and we have
+not fixed the Facebook and Google plus bugs and also there is another bug for communicating with the fragments.
+3. Our plan is to fix up fragment communication and more researching.

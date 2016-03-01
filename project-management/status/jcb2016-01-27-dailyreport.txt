@@ -1,0 +1,6 @@
+Mobile Client group: Joaquin Bautista
+1. We have fixed the camera bug to go back to the Camera Activity from the camera mode.
+2. Our app crash when we tried to go back to the Home Activity from the Camera Activity we are believing it is that we are not passing the Twitter credentials
+around the activities. The Camera activity navigation is not following our format of navigation.
+3. Our plan implement the activities to pass around the Twitter credentials with the possibility of the shared preferences, fix up camera activity navigation and
+put more creativity on the interface and of course more researching and prototyping.
