@@ -1,0 +1,16 @@
+AD440
+2/29/16
+
+Status Report 22:
+
+1) I am continuing my work on integrating code to send GET and DELETE with tags to update and
+   delete them to server. Also,
+   I am working on sending at HTTP request POST to the server side with that
+   variable.
+ 
+
+2) In the proccess of figuring out how to send the HTTP request POST to server.
+
+3  Still working on adding tags to files and searching by tags.  
+   I am researching how to search by tags and twitter login. 
+   
