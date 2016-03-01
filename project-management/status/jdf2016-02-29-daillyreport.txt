@@ -1,0 +1,12 @@
+What have you completed since the last report?
+
+Commented the blob.py script and changed the parameters to match the changes discussed with the client 
+regarding sending URL information in the headers.
+
+What do you plan to complete by the next report?
+
+I will have test cases up and and running on all methods
+
+What is getting in your way?
+
+Setting up the flask server
