@@ -14,7 +14,7 @@
 <body>
 <header>
 
-<a href="index.html" id="uploadnewimage">Upload New Image</a>
+<a href="uploadimage.html" id="uploadnewimage">Upload New Image</a>
 
 
   <img src="images/person.jpg" />
@@ -66,7 +66,7 @@
 		});
 	
 		fd.append('formdata',JSON.stringify($scope.dataform));
-		$http.post('index.html',fd,{  //   <----- HTTP POST
+		$http.post('uploadimage.html',fd,{  //   <----- HTTP POST
 			transformRequest:angular.identity,
 			headers:{'Content-type':undefined}
 		}).success(function(data){
