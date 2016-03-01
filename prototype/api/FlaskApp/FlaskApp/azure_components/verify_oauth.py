@@ -7,7 +7,7 @@
 # 
 
 import requests
-from app_keys import oauth_consumer_key, oauth_consumer_secret 
+from static.app_keys import oauth_consumer_key, oauth_consumer_secret 
 from requests_oauthlib import OAuth1
 
 # method calls twitter api and verifys a user's credentials.  The method

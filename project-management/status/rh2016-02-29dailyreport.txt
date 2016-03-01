@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 2/29/16
+
+What have you completed since the last report?
+I cleaned up the file structure for our API app to make it more modular.  I also updated our API functions to accept headers and eliminated a username parameter that was redundant in our api methods.  These changes make our app more compliant with RESTful standards.
+
+What do you plan to complete by the next report?
+I plan to discuss the changes made to the API with our group on Tuesday and plan to get a status report on the documentDB modules.  I’m also going to work with the client teams to create Azure virtual environments with our API.  This will give them a test environment for interacting with our API.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  However, I’m still waiting on the completion of our documentDB modules to complete our API. 

@@ -1,52 +1,51 @@
 from flask import Flask
 from flask import request
 from flask import jsonify
-from api_methods import *
+from azure_components.api_methods import *
 
 app = Flask(__name__)
 
 
 @app.route("/getImages", methods=['GET'])
 def getImages():
-    timestamp = request.args.get('timestamp')
-    tags = request.args.get('tags')
-    username = request.args.get('username')
-    token = request.args.get('token')
-    secret = request.args.get('secret')
-    #prev parameter
-    rtn_json = getImagesJSON(timestamp, tags, username, token, secret)
+    timestamp = request.headers.get('timestamp')
+    tags = request.headers.get('tags')
+    username = request.headers.get('username')
+    token = request.headers.get('token')
+    secret = request.headers.get('secret')
+    prev = request.headers.get('prev')
+    if opt_param is None:
+        prev = false
+    rtn_json = getImagesJSON(timestamp, prev, tags, username, token, secret)
     return jsonify(request=rtn_json)
 
 @app.route("/uploadImage", methods=['POST'])
 def uploadImage():
-    username = request.args.get('username')
-    blob = request.args.get('blob')
-    filename = request.args.get('filename')
-    token = request.args.get('token')
-    secret = request.args.get('secret')
-    tags = request.args.get('tags')
+    username = request.headers.get('username')
+    blob = request.headers.get('blob')
+    filename = request.headers.get('filename')
+    token = request.headers.get('token')
+    secret = request.headers.get('secret')
+    tags = request.headers.get('tags')
     
     rtn_json = uploadImageJSON(username, blob, filename, token, secret, tags)
     return jsonify(request=rtn_json)
 
 @app.route("/deleteImage", methods=['DELETE'])
 def deleteImage():
-    username = request.args.get('username')
-    blobURL = request.args.get('blobURL')
-    token = request.args.get('token')
-    secret = request.args.get('secret')
-    #remove username
+    blobURL = request.headers.get('blobURL')
+    token = request.headers.get('token')
+    secret = request.headers.get('secret')
     rtn_json = deleteImageJSON(username, blobURL, token, secret)
     return jsonify(request=rtn_json)
 
 @app.route("/updateTags", methods=['PUT'])
 def updateTags():
-    blobURL = request.args.get('blobURL')
-    tags = request.args.get('tags')
-    username = request.args.get('username')
-    token = request.args.get('token')
-    secret = request.args.get('secret')
-    #remove username
+    blobURL = request.headers.get('blobURL')
+    tags = request.headers.get('tags')
+    token = request.headers.get('token')
+    secret = request.headers.get('secret')
+
     
     rtn_json = updateTagsJSON(blobURL, tags, username, token, secret)
     return jsonify(request=rtn_json)
