@@ -1,0 +1,12 @@
+1.  What have you completed since the last report?
+    
+    Still working on the duplicate add tag bug.
+
+2.  What do you plan to complete by the next report?
+    
+    Fix a bug we found which is a duplicate "add tag" button.
+
+3.  What is getting in your way?
+
+    No issues.
+
