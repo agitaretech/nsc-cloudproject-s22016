@@ -4,17 +4,11 @@ Report:  3-2-2016
 
 
 * What have you completed since the last report?
-
+Since last report I had meeting with my team in our class. Also I fixed the HTTP POST bug last night.
+Also I emailed my team about remaining works to do. We need to have plan for our next two final week.
 
 * What do you plan to complete by the next report?
-
+I would like to add drag/drop functionality to the upload page. Then I am going to work on searching tag and displaying them.
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+AngularJS is new and there are a few resources online about specific questions like posting image and tags all together. It is not a big problem though! 

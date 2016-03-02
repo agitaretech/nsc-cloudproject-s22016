@@ -1,9 +1,4 @@
 
-<<<<<<< HEAD
-
-
-=======
->>>>>>> origin/master
 <!doctype html>
 
 <html lang="en">
@@ -14,21 +9,12 @@
 <meta name="author" content="Kianoush">
 <link rel="stylesheet" href="styles.css">
 <script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
-
-
-
-
-
 </head>
 
-<<<<<<< HEAD
-<body ng-app="myApp" ng-controller="load">
-=======
 <body>
->>>>>>> origin/master
 <header>
 
-<a href="index.html" id="uploadnewimage">Upload New Image</a>
+<a href="uploadimage.html" id="uploadnewimage">Upload New Image</a>
 
 
   <img src="images/person.jpg" />
@@ -80,11 +66,7 @@
 		});
 	
 		fd.append('formdata',JSON.stringify($scope.dataform));
-<<<<<<< HEAD
-		$http.post('http://www.webolife.com/test/test4/upload.php',fd,{  //   <----- HTTP POST
-=======
-		$http.post('index.html',fd,{  //   <----- HTTP POST
->>>>>>> origin/master
+		$http.post('uploadimage.html',fd,{  //   <----- HTTP POST
 			transformRequest:angular.identity,
 			headers:{'Content-type':undefined}
 		}).success(function(data){
@@ -97,10 +79,6 @@
     
   });
 
-<<<<<<< HEAD
-  
-=======
->>>>>>> origin/master
 //----------------------------------------------------
 
 //Directive
