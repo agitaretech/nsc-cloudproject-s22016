@@ -1,6 +1,8 @@
 package com.tobin.fotofetcher.Fragments;
 
 import android.content.Context;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -11,18 +13,18 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
-import com.tobin.fotofetcher.AsyncObjectList;
+import com.android.volley.toolbox.ImageLoader;
+import com.android.volley.toolbox.NetworkImageView;
+import com.tobin.fotofetcher.Activities.LoginActivity;
+import com.tobin.fotofetcher.AsyncAndDB.AsyncObjectList;
 import com.tobin.fotofetcher.Interface;
+import com.tobin.fotofetcher.LoginCred.TwitterCustomVolleyRequest;
 import com.tobin.fotofetcher.R;
-import com.tobin.fotofetcher.RecyclerViewStuff.DataObject;
 import com.tobin.fotofetcher.RecyclerViewStuff.DividerItemDecoration;
 import com.tobin.fotofetcher.RecyclerViewStuff.MyRecyclerViewAdapter;
 import com.tobin.fotofetcher.RecyclerViewStuff.SwipeTouchHelper;
-
-import java.util.ArrayList;
 
 public class ListViewFragment extends Fragment {
 
@@ -31,12 +33,21 @@ public class ListViewFragment extends Fragment {
     RecyclerView mRecyclerView;
     MyRecyclerViewAdapter mAdapter;
 
+    NetworkImageView profileImage;
+    TextView textViewUsername;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         Log.d("name", "here listFrag");
         View view = inflater.inflate(R.layout.fragment_image_list, container, false);
+
+        profileImage = (NetworkImageView) view.findViewById(R.id.home_twitter_profile_image);
+        textViewUsername = (TextView) view.findViewById(R.id.home_twitter_username_text_view);
+
+        if (textViewUsername != null)
+            retrieveTwitterLogin();
+
         list= AsyncObjectList.getInstance();
         mRecyclerView = (RecyclerView) view.findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -52,7 +63,9 @@ public class ListViewFragment extends Fragment {
               MyRecyclerViewAdapter.MyClickListener() {
                   @Override
                   public void onItemClick(int position, View v) {
+
                       listener.itemClicked(position);
+
                   }
               });
 
@@ -61,6 +74,22 @@ public class ListViewFragment extends Fragment {
         helper.attachToRecyclerView(mRecyclerView);
 
         return view;
+    }
+
+    public void retrieveTwitterLogin() {
+
+        SharedPreferences sharedPreferences = getActivity().getSharedPreferences("twitter_creds", Context.MODE_PRIVATE);
+        String username = sharedPreferences.getString(LoginActivity.KEY_USERNAME, "username");
+        String profileImageUrl = sharedPreferences.getString(LoginActivity.KEY_PROFILE_IMAGE_URL, "profile_image");
+
+        //Loading image
+        ImageLoader imageLoader = TwitterCustomVolleyRequest.getInstance(getActivity()).getImageLoader();
+        imageLoader.get(profileImageUrl, ImageLoader.getImageListener(profileImage, R.mipmap.ic_launcher, android.R.drawable.ic_dialog_alert));
+
+        profileImage.setImageUrl(profileImageUrl, imageLoader);
+
+        //Setting the username in textview
+        textViewUsername.setText("Welcome, " + username);
     }
 
     public void updateRecyclerView(int position){
