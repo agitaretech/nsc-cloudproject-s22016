@@ -9,5 +9,5 @@ import com.tobin.fotofetcher.RecyclerViewStuff.DataObject;
 public interface Interface {
 //     void itemClicked(int objectPosition, String name, String tags, String url);
     void itemClicked(int position);
-    void updateTag(DataObject object, int position);
+    void updateTag(int position);
 }

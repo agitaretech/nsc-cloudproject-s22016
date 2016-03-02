@@ -1,0 +1,6 @@
+Mobile Client group: Joaquin Bautista
+1. I have created two alert dialogs for the user to edit their tags and add their own tags.
+2. The alert dialog to add tags does work but it doesn't save the state when I get out of the full photo to go back to the list view and go back to the same photo. 
+The alert dialog to edit tags does not edit the tags at this time but it is grabbing the id of the tags so we need to get those implemented. The is also not
+being displayed on the camera home page when we select a photo from the gallery.
+3. Our plan is to fix up the alert dialogs and fix the camera bugs, if we finish before that we will clean up more of the UI.

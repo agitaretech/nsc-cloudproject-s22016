@@ -1,12 +1,15 @@
 package com.tobin.fotofetcher.RecyclerViewStuff;
 
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.helper.ItemTouchHelper;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.tobin.fotofetcher.R;
 
 import java.util.ArrayList;
@@ -19,12 +22,14 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewA
         TextView imageName;
         TextView tags;
         TextView url;
+        ImageView thumb;
 
         public DataObjectHolder(View itemView) {
             super(itemView);
             imageName = (TextView) itemView.findViewById(R.id.imageNameTextView);
             tags = (TextView) itemView.findViewById(R.id.tagNameTextView);
             url = (TextView) itemView.findViewById(R.id.url_text_view);
+            thumb = (ImageView) itemView.findViewById(R.id.thumbnailImageView);
             itemView.setOnClickListener(this);
         }
 
@@ -55,6 +60,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewA
         holder.imageName.setText(mDataset.get(position).getImageName());
         holder.tags.setText(mDataset.get(position).getTags());
         holder.url.setText(mDataset.get(position).getUrl());
+        Picasso.with(holder.itemView.getContext()).load(holder.url.getText().toString()).resize(100, 100).into(holder.thumb);
     }
 
     public void addItem(DataObject dataObj, int index) {
@@ -75,4 +81,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewA
     public interface MyClickListener {
          void onItemClick(int position, View v);
     }
+
+
 }

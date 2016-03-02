@@ -1,0 +1,6 @@
+Mobile Client group: Joaquin Bautista
+1. We have made improvements on the code on the edit tags to improve its performance on the fragments. We have also fixed the the issue with the camera activity
+by displaying the photo on the camera activity from the photo gallery.
+2. We still can't get the saved state for the two alert dialogs; adding a tag and editing a tag. Also the photo being displayed from the photo gallery on the
+camera activity is a little blurry.
+3. Our plan is to continue to fix up the alert dialogs and make the photos displayed much clearer, if we finish before that we will clean up more of the UI.
