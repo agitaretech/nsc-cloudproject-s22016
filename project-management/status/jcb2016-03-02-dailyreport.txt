@@ -1,0 +1,15 @@
+Mobile Client group: Joaquin Bautista
+1. Fixed the following bugs:
+back button
+gap at bottom of image popup
+resize images
+added loading symbol for images
+set maximum height for each item
+implemented image thumbnails
+added delete button to alert dialog
+maintain list position after tag update
+make "add tag" button stay on the bottom of newly created buttons
+fixed picture taking bug
+fixed position of tag list to top after item click
+2. Created a database and translater class for the DB team's implementation.
+3. Our plan is to connect to the Database by coding up the database and translater classes for preparation and fix up few bugs.
