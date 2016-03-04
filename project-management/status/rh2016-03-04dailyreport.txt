@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 3/4/16
+
+What have you completed since the last report?
+I haven’t completed much since the last report.  I met with Ian last night to trouble shoot the GET method code he assembled and I’ve started to write some of the documentation for the API.
+
+What do you plan to complete by the next report?
+I plan to complete the delete function for deleting data from documentDB.  I also plan to migrate the rest of the code from the modules that still need to be completed.
+
+What is getting in your way?
+At this point, the API can’t be completed until we have the documentdb modules.  I am still waiting on this code.  Once the documentdb modules are completed, our portion of the project will be complete.  I’m working with my team and trying to create a sense of urgency to get this done this week.  
