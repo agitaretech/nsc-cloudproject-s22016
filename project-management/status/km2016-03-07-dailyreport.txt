@@ -4,17 +4,12 @@ Report:  3-7-2016
 
 
 * What have you completed since the last report?
-
+I am done with my search box. It gets the keywords (comma delimiters) and creates JSON and 
+POST it to the server. Created PHP file to get the data and display it. It works 100%.
 
 * What do you plan to complete by the next report?
-
+I am planning to email my code to my team members. They need to add it to the display page. 
+Also we will have class tomorrow. We will have meeting to see what else should be taken care of. 
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+Nothing so far. 
