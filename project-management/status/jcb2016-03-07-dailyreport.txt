@@ -1,0 +1,4 @@
+Mobile Client group: Joaquin Bautista
+1. Put in code for implementation of the translater class.
+2. Fixed update method and tested another Twitter account to make sure it can still accept another user.
+3. Our plan is to continue coding up the database and translater classes.
