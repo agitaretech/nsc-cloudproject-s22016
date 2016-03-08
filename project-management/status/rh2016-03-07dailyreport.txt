@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 3/7/16
+
+What have you completed since the last report?
+I’ve completed the getImages and deleteImages functions for our API and documentDB modules.  I also integrated the code with our Flask App.
+
+What do you plan to complete by the next report?
+I plan to work on the update tags method.  I also plan to complete the API documentation for the client teams.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  However, there are several modules that need to be built before I can finish creating our API prototype.
