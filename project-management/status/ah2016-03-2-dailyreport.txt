@@ -1,0 +1,14 @@
+AD440
+3/2/16
+
+Status Report 23:
+
+1) I began the work of researching and implementing Twitter oAuth token and response.
+ 
+
+2) I took about 3 tutorials and poured over a dozen examples.
+
+3  Not at all sure how to integrate it into our project. 
+    Still working on adding tags to files and searching by tags.  
+   I am researching how to search by tags and twitter login. 
+   
