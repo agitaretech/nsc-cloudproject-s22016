@@ -1,0 +1,32 @@
+﻿body {
+    height:100%;
+}
+.loginDiv
+{
+    position:absolute;
+    top:10%;
+    right:10%;
+    width:20%;
+}
+    .loginDiv div
+    {
+        float:left;
+        margin-right:5%;
+        border:1px solid #2b85db;
+        border-radius:5px;
+        padding:5px;
+        background:#90b2d4;
+        cursor:pointer;
+        color:#fff;
+    }
+        .loginDiv div:hover
+        {
+            background:#b6cfe8;
+            border:1px solid #b6cfe8;
+        }
+#userinfo
+{
+    position:relative;
+    width:30%;
+    height:10%;
+}
