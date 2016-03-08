@@ -11,17 +11,23 @@ app = Flask(__name__)
 def getImages():
     #header variables for get api method
     timestamp = request.headers.get('timestamp')
+    if timestamp is None:
+        timestamp = 0
     tags = request.headers.get('tags')
+    if tags is None:
+        tags_new = []
+    else:
+        tags_new = tags.split()
     username = request.headers.get('username')
     token = request.headers.get('token')
     secret = request.headers.get('secret')
     prev = request.headers.get('prev')
     # checks if prev variable is set
-    if opt_param is None:
+    if prev is None:
         # updates variable to false
         prev = 'false'
     #calls get image method to get JSON from api method (get)
-    rtn_json = getImagesJSON(timestamp, prev, tags, username, token, secret)
+    rtn_json = getImagesJSON(timestamp, prev, tags_new, username, token, secret)
     # return json request
     return jsonify(request=rtn_json)
 
@@ -50,7 +56,7 @@ def deleteImage():
     secret = request.headers.get('secret')
 
     #calls delete image method (delete)
-    rtn_json = deleteImageJSON(username, blobURL, token, secret)
+    rtn_json = deleteImageJSON(blobURL, token, secret)
     #returns json succes or error json message
     return jsonify(request=rtn_json)
 

@@ -63,9 +63,9 @@ def deleteBlob(blobURL):
         exploded = blobURL.split("/")#split based on /'s
         #second to last element is container name(username), last element is blob name
         blob_service.delete_blob(exploded[len(exploded)-2], exploded[len(exploded)-1])
-        return ["success"]
+        return 'success'
     except Exception:
-        return ["error"]
+        return 'error'
     
 #unused function incase list of all blobs in container is desired.
 def listBlobs(username):
@@ -90,3 +90,5 @@ def progress_callback(current, total):
     #if current bytes uploaded == total file size, upload successful
     if(current==total):
         uploaded = True
+
+

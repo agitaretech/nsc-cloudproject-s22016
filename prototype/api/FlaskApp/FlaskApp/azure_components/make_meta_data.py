@@ -1,4 +1,5 @@
 import pydocumentdb.document_client as document_client
+import verify_oauth
 import datetime
 from datetime import timedelta
 from static.app_keys import db_client, db_client_key, db_name, db_collection

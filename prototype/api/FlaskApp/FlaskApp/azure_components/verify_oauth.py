@@ -46,7 +46,7 @@ def main():
     access_token_secret='BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF'
     # call method and print result
     #print(verify_oauth(access_token,access_token_secret))
-    print(verify_oauth(access_token,access_token_secret))
+    print(verifyOauth(access_token,access_token_secret))
 
 # call main
 if __name__ == "__main__":
