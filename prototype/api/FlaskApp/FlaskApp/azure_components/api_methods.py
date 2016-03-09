@@ -15,7 +15,7 @@ def uploadImageJSON(username, blob, filename, token, secret, tags):
         return upload_image_blob_error_json
 
 
-    rtnDocumentdbMsg = makeMetadata(username, filename, tags.split(), rtnBlobList[0], rtnBlobList[1])  
+    rtnDocumentdbMsg = makeMetadata(username, filename, tags.split(','), rtnBlobList[0], rtnBlobList[1])  
     if rtnDocumentdbMsg  != 'success':
         return upload_image_db_error_json
         
