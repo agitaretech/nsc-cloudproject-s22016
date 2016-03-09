@@ -17,7 +17,7 @@ def getImages():
     if tags is None:
         tags_new = []
     else:
-        tags_new = tags.split()
+        tags_new = tags.split(',')
     username = request.headers.get('username')
     token = request.headers.get('token')
     secret = request.headers.get('secret')
