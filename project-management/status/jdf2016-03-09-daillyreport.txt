@@ -1,0 +1,12 @@
+What have you completed since the last report?
+
+I've learned that I can update tags by instead copying a document and creating an entirely new document based off
+its fields, and replacing the tags field with the new updated tags
+
+What do you plan to complete by the next report?
+
+I will have a working solution for updating tags
+
+What is getting in your way?
+
+Implementing it.

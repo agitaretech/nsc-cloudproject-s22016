@@ -1,0 +1,11 @@
+What have you completed since the last report?
+
+I think I may have a solution on how to update tags in documentDB
+
+What do you plan to complete by the next report?
+
+I will have a solution on how to update tags in documentDB
+
+What is getting in your way?
+
+Implementing the solution to update tags in documentDB

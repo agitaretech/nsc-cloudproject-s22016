@@ -1,0 +1,11 @@
+What have you completed since the last report?
+
+I've learned that individual fields in documentDB can't be edited
+
+What do you plan to complete by the next report?
+
+I will find another solution for updating tags
+
+What is getting in your way?
+
+Need to find another solution for updating tags
