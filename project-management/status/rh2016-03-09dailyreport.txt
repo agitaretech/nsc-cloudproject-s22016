@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 3/9/16
+
+What have you completed since the last report?
+I worked with the mobile team to get an API test environment up and running for them to use.  I also added a header response to our API so the Web team could access our API through an AJAX call.
+
+What do you plan to complete by the next report?
+I’m going to work on the update tags method and complete the API documentation for the client teams.  I’m also going to set up the Flask app our class’ Azure account.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  
