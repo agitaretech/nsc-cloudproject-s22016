@@ -1,0 +1,4 @@
+Mobile Client group: Joaquin Bautista
+1. No change or implementation.
+2. No change or implementation.
+3. Our plan is to continue coding up the database and translater classes.
