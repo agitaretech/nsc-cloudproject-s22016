@@ -4,17 +4,10 @@ Report:  3-11-2016
 
 
 * What have you completed since the last report?
-
+I read about HTTP PUT to see how it works on the AngularJS platform. Also I had talk with JC (from dev team) to see how we can integrate our code with theirs. I updated other web UI team members and also discussed with them about remaining works. 
 
 * What do you plan to complete by the next report?
-
+I plan to integrate my code with Avi and Ksenia’s code. They are working on their code now. 
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+Leaving all integration works for the last minutes and last week makes me worry. We need some time for debugging or fixing any possible issues. 
