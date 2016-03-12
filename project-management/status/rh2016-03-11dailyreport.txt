@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 3/11/16
+
+What have you completed since the last report?
+I cleaned up the documentDB file so all the methods are in one location.  I created an instance of the app on our class’ shared Azure account.  I also tested and updated the upload method so the client can upload a file through a http request.  
+
+What do you plan to complete by the next report?
+I plan to finish the API documentation so the client teams have all of the information to interact with the API.
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  
