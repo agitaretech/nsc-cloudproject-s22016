@@ -1,0 +1,12 @@
+1.  What have you completed since the last report?
+    
+    Continued to get our backend setup for testing.
+
+2.  What do you plan to complete by the next report?
+    
+    Be able to perform at least one call to our database from the android app.
+
+3.  What is getting in your way?
+
+    No issues.
+
