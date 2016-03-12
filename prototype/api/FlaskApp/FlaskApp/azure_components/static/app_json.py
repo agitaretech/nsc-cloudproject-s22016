@@ -6,6 +6,8 @@ upload_image_db_error_json = {'status': 'error', 'msg': "failure to upload metad
 delete_image_blob_error_json = {'status': 'error', 'msg': "failure to delete image from azure storage"}
 delete_image_db_error_json = {'status': 'error', 'msg': "failure to delete image from documentdb"}
 get_image_error_json = {'status': 'error', 'msg': "failure to get image links from documentdb"}
+update_tags_error_json = {'status': 'error', 'msg': "failure to update tags in documentdb"}
+
 # json success messages each api method
 upload_image_success_json = {'status': 'success', 'msg': "image uploaded"}
 delete_image_success_json = {'status': 'success', 'msg': "image deleted"}

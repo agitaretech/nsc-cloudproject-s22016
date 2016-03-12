@@ -1,6 +1,7 @@
 from azure.storage.blob import BlobService
 import datetime
 import string
+import base64
 from static.app_keys import blob_account_name, blob_account_key
 
 #get accountName and accountKey from app_keys module
@@ -20,8 +21,10 @@ def uploadBlob(username, file, filename):
         global uploaded
         username = username.lower()
         returnList = []
+        #decode base64 image string
+        decodedFile = file.decode("base64")
 
-        blob_service.create_container(username, x_ms_blob_public_access='container')
+        blob_service.create_container(username, x_ms_blob_public_access="container")
 
         #get current datetime in UTC for a completely unique identifier
         time = datetime.datetime.utcnow()
@@ -30,16 +33,15 @@ def uploadBlob(username, file, filename):
         timeReplaced = str(time).replace(':','').replace('.','').replace(' ','') + "_" + filename
         #build the URL ahead of the upload and have it ready to send to DB if successful
         URLstring = "https://" + accountName + ".blob.core.windows.net/" + username + "/" + timeReplaced 
-
         uploaded = False
         #put the blob into storage
         #username is the container name, timeReplaced is the blob name
         #progress_callback calls the method of the same name and
         #checks upload status in bytes at the server tick rate
-        blob_service.put_block_blob_from_path(
+        blob_service.put_block_blob_from_bytes(
             username,
             timeReplaced,
-            file,
+            decodedFile,
             x_ms_blob_content_type='image/png',
             progress_callback=progress_callback
             )
@@ -92,3 +94,14 @@ def progress_callback(current, total):
         uploaded = True
 
 
+def main():
+    pass
+    #encoded = base64.b64encode(open('/Users/rjhunter/Desktop/bridge.jpg', "rb").read())
+    #print(encoded)
+    #fh = open("/Users/rjhunter/Desktop/testEncode.txt", "wb")
+    #fh.write(encoded)
+    #fh.close()
+    #print(uploadBlob('fin',encoded,'test123'))
+    
+if __name__ == "__main__":
+    main()
