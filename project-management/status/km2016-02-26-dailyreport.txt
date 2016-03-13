@@ -4,17 +4,14 @@ Report:  2-26-2016
 
 
 * What have you completed since the last report?
-
+I worked on my basic AngularJS POST form. It is now able to post hidden hard coded input value as well. 
 
 * What do you plan to complete by the next report?
-
+I am planning to make the above form more dynamic. I do need to hardcode anything. It should be happened automatically and dynamically. 
 
 * What is getting in your way?
+I spent over three hours on getting a file path from my desktop PC, combining it with some tags and posting them. Everything works perfect separately but as soon as I merge all of them, It does not work without giving me any error. 
 
 
 
 
-
-
-
-------------------------------> This status report will be completed on due date

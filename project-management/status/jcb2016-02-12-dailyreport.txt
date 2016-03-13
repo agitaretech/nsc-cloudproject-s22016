@@ -1,0 +1,6 @@
+Mobile Client group: Joaquin Bautista
+1. I attempted to implement the saved state for the edited tags on rotation to landscape only on the Android console but couldn't get the button to keep its
+saved edited text.
+2. The fragment gets destroyed when we rotate back from landscape to portrait from the failed displayed edited tags.
+3. Our plan is to do more research and plan to continue to attempt to save the edited tags on rotation, resize the images, and also try to fix to save the state if the user wants to
+add a button and well as also make it functional. We will also implement the volley class to get it ready to interact with the database of Ian's group. 

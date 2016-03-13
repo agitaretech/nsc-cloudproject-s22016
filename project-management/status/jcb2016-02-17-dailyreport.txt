@@ -1,0 +1,4 @@
+Mobile Client group: Joaquin Bautista
+1. I have implemented some of the code for the sending the image to the DB using blob, but it doesn't work.
+2. We are using the previous version of our app for now because of the volley transform bug.
+3. Our plan is to further implement the blob stream for the image and work on the saved instance state for the tags. 

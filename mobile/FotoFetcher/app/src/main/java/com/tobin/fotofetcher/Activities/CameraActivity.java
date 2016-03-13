@@ -89,11 +89,12 @@ public class CameraActivity extends AppCompatActivity {
             case CAM_REQUEST:
                 /* Camera Piece */
                 if(resultCode == RESULT_OK) {
-                    String s = data.getExtras().get("data").toString();
-                    Bitmap myBitmap = BitmapFactory.decodeFile(s);
-                    Bitmap thumbnail = Bitmap.createScaledBitmap(myBitmap, 100, 100, true);
-                    photo.setImageBitmap(thumbnail);
-                    Toast.makeText(this,thumbnail.toString(),Toast.LENGTH_LONG).show();
+//                    String s = data.getExtras().get("data").toString();
+                    Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+//                    Bitmap myBitmap = BitmapFactory.decodeFile(s);
+//                    Bitmap thumbnail = Bitmap.createScaledBitmap(myBitmap, 100, 100, true);
+                    photo.setImageBitmap(bitmap);
+                    Toast.makeText(this,bitmap.toString(),Toast.LENGTH_LONG).show();
 
                     break;
                 }

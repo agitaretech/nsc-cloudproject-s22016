@@ -1,0 +1,5 @@
+Mobile Client group: Joaquin Bautista
+1. We have successfully implemented the share preferences of the app to pass the twitter credentials among the activities and now we can transfer data
+between the fragments.
+2. Our UI is only disorganized for the moment.
+3. Our plan is to clean up the UI.
