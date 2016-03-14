@@ -2,7 +2,6 @@ Name: Kianoush Moradian
 Report:  3-7-2016
 
 
-
 * What have you completed since the last report?
 I am done with my search box. It gets the keywords (comma delimiters) and creates JSON and 
 POST it to the server. Created PHP file to get the data and display it. It works 100%.
