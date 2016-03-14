@@ -1,8 +1,9 @@
 
-
-module.controller('resultsController', 
+ 
+app.controller('resultsController', 
 
  function($scope, $http) {
+
 	 
 $http({method: 'GET', url: 'postsproto.json'}).success(function(data) {
 $scope.posts = data;
@@ -11,6 +12,7 @@ $scope.posts = data;
     };
 
    $scope.getPicked = function () {
+
         return $scope.picked;
     };
 
@@ -22,8 +24,7 @@ $scope.posts = data;
   return {
 	  restrict: 'E',
         replace: true,
-    templateUrl: 'js/directives/results.html'
+    templateUrl: 'js/Directives/results/results.html'
   };
 });
-
 
