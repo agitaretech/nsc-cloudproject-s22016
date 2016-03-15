@@ -1,0 +1,12 @@
+1.  What have you completed since the last report?
+    
+    We now are able to do a get request do the database.
+
+2.  What do you plan to complete by the next report?
+    
+    We will finish the rest of the REST methods.
+
+3.  What is getting in your way?
+
+    No issues.
+
