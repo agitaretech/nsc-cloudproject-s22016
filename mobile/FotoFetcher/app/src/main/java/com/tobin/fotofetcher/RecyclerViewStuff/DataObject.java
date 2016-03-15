@@ -4,11 +4,13 @@ public class DataObject {
     private String imageName;
     private String tags;
     private String url;
+    private String uniqueId;
 
-    public DataObject (String text1, String text2, String text3){
-        imageName = text1;
-        tags = text2;
-        url = text3;
+    public DataObject (String imageName, String tags, String url,String uniqueId){
+        this.imageName = imageName;
+        this.tags = tags;
+        this.url = url;
+        this.uniqueId=uniqueId;
     }
 
     public String getImageName() {
@@ -34,5 +36,7 @@ public class DataObject {
     public void setUrl(String url){
         this.url = url;
     }
+    public void setUniqueId(String uniqueId){this.uniqueId=uniqueId;}
+    public String getUniqueId(){return uniqueId;}
 
 }

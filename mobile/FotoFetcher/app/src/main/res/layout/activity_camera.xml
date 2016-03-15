@@ -30,18 +30,25 @@
         android:layout_alignParentEnd="true" />
 
     <Button
+        android:id="@+id/upload_image_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Upload"
         android:textAppearance="?android:textAppearanceSmall"
         android:textColor="@color/black"
-        android:onClick="uploadPhoto"
-        android:id="@+id/button"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"/>
 
     <EditText
-        android:id="@+id/EditTag"
+        android:id="@+id/file_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter Filename"
+        android:layout_above="@+id/new_tags"
+        android:layout_alignParentLeft="true"/>
+
+    <EditText
+        android:id="@+id/new_tags"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:hint="Enter Tag!"

@@ -26,10 +26,10 @@
         android:id="@+id/fullSizePhotoImageView"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:src="@drawable/hankbob"/>
+        android:layout_weight="1"/>
 
     <ScrollView
+        android:id="@+id/scrollView"
         android:layout_width="fill_parent"
         android:layout_height="0dp"
         android:layout_weight="1">

@@ -3,9 +3,6 @@ package com.tobin.fotofetcher.RecyclerViewStuff;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.helper.ItemTouchHelper;
 
-/**
- * Created by Tobin on 2/24/16.
- */
 public class SwipeTouchHelper extends ItemTouchHelper.SimpleCallback {
     private  MyRecyclerViewAdapter mAdapter;
 

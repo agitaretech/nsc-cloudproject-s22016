@@ -30,10 +30,6 @@ public class LoginActivity extends Activity {
     private static final String TWITTER_KEY = "kbwf3Qbb6MfjXiPirco5j3UYe";
     private static final String TWITTER_SECRET = "1Lr0HOTxQBLU22FsH2CH9RFBtnQCHwjAsidZrctvYoy9yIDX7n";
 
-    //Tags to send the username and image url to next activity using intent
-    public static final String KEY_USERNAME = "username";
-    public static final String KEY_PROFILE_IMAGE_URL = "image_url";
-
     //Twitter Login Button
     private TwitterLoginButton twitterLoginButton;
     // End of Twitter login variables
@@ -109,14 +105,11 @@ public class LoginActivity extends Activity {
                         // Save and store the twitter user name and password in the shared preferences array to pass among activities
                         SharedPreferences sharedPreferences = getSharedPreferences("twitter_creds", Context.MODE_PRIVATE);
                         SharedPreferences.Editor editor = sharedPreferences.edit();
-                        editor.putString(KEY_USERNAME, username);
-                        editor.putString(KEY_PROFILE_IMAGE_URL, profileImage);
+                        editor.putString("username", username);
+                        editor.putString("userImage", profileImage);
+                        editor.putString("token", TWITTER_KEY);
+                        editor.putString("secret", TWITTER_SECRET);
                         editor.commit();
-
-                        if(sharedPreferences.contains("user_name") && sharedPreferences.contains("user_profile_image_url")) {
-                            Log.d("shared", "creds saved");
-                        } else
-                            Log.d("shared", "creds already exist");
 
                         //Starting intent
                         startActivity(intent);

@@ -17,25 +17,32 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.PopupWindow;
 import android.widget.ProgressBar;
+import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
-import com.tobin.fotofetcher.AsyncObjectList;
+import com.tobin.fotofetcher.SingletonAndDB.ObjectList;
+import com.tobin.fotofetcher.SingletonAndDB.Translator;
 import com.tobin.fotofetcher.Interface;
 import com.tobin.fotofetcher.R;
 import com.tobin.fotofetcher.RecyclerViewStuff.DataObject;
 
 public class FullSizeImageFragment extends Fragment {
+    Translator translator;
+
+    // get cred from shared pref
     Button btn,addTagButton;
 
-    LinearLayout ll;
+    public LinearLayout ll;
+    public ScrollView sv;
 
     public static PopupWindow popupWindow;
     String tags, name, url;
     String[] tagArray;
     DataObject object;
-    AsyncObjectList list;
+    ObjectList list;
     ProgressBar fullPhotoProgressBar;
     int position = 0;
 
@@ -48,40 +55,46 @@ public class FullSizeImageFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_full_size_photo, container, false);
+        translator = Translator.getInstance(getContext());
         fullPhotoProgressBar = (ProgressBar) view.findViewById(R.id.full_photo_progressBar);
+        sv = (ScrollView) view.findViewById(R.id.scrollView);
         return view;
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.d("name", "here fullsize");
 
         if (savedInstanceState != null) {
 
             this.position = savedInstanceState.getInt("position");
         }
-        Log.d("onViewCreated", "1111111111");
-        Log.d("onViewCreated", position + "");
 
-        list = AsyncObjectList.getInstance();
+        list = ObjectList.getInstance(getActivity());
+        Log.d("full",list.toString());
+
         setObject(position);
-
     }
 
-
-
     public void setObject(int position) {
+        if(list.getList()==null||list.getList().size() == 0) {
+            object = new DataObject("No pics to view", null, null, null);
+            name = object.getImageName();
+            this.position = position;
+            setName(name);
+        } else {
+            object = list.getDataObject(position);
+            url = object.getUrl();
+            name = object.getImageName();
+            tags = object.getTags();
+            this.position = position;
+            tagArray = tags.split(",");
+            displayTags();
+            setName(name);
+            setURL(url);
+        }
 
-        object = list.getDataObject(position);
-        url = list.getDataObject(position).getUrl();
-        name = list.getDataObject(position).getImageName();
-        tags = list.getDataObject(position).getTags();
-        tagArray = tags.split(",");
-        this.position = position;
-        setName(name);
-        displayTags();
-        setURL(url);
+
     }
 
     public void setName(String name) {
@@ -132,9 +145,6 @@ public class FullSizeImageFragment extends Fragment {
     }
 
     public void displayTags() {
-
-        LinearLayout allTagsContainer = (LinearLayout) getActivity().findViewById(R.id.all_tags_container);
-//        allTagsContainer.removeAllViews();
         ll = (LinearLayout) getActivity().findViewById(R.id.tagContainer);
         LinearLayout addTagLayout = (LinearLayout) getActivity().findViewById(R.id.add_tag_container);
         addTagLayout.removeAllViews();
@@ -165,6 +175,7 @@ public class FullSizeImageFragment extends Fragment {
                 @Override
                 public void onClick(View v) {
                     displayAlertDialogToAddTag();
+
                 }
             });
 //        ll.addView(btn);
@@ -181,7 +192,7 @@ public class FullSizeImageFragment extends Fragment {
         String cancel = "Cancel";
         String delete = "Delete";
 
-        AlertDialog.Builder ad = new AlertDialog.Builder(context);
+        final AlertDialog.Builder ad = new AlertDialog.Builder(context);
         final EditText input = new EditText(getActivity());
         input.setHint("Edit this tag");
         final int tagIndex = number;
@@ -192,7 +203,25 @@ public class FullSizeImageFragment extends Fragment {
                 delete,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int arg1) {
-                        // Delete implementation
+                        String result = "";
+                        for (int i = 0; i < tagArray.length; i++) {
+                            if (i != tagIndex) {
+                                if (result.equals("")) {
+                                    result = tagArray[i];
+                                } else {
+                                    result += ", " + tagArray[i];
+                                }
+                            }
+                        }
+
+                        object.setTags(result);
+                        ll.removeViewAt(tagIndex);
+
+                        translator.updateMetaData(object);
+                        Interface anInterface = (Interface) getActivity();
+                        anInterface.updateTag(position);
+
+
                     }
                 }
         );
@@ -210,8 +239,15 @@ public class FullSizeImageFragment extends Fragment {
                 submit,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int arg1) {
+
+//                        if(addedBtn != null) {
+//                            tagArray[tagArray.length - 1] = input.getText().toString();
+//                            addedBtn.setText(tagArray[tagArray.length - 1]);
+//                        }
+
                         tagArray[tagIndex] = input.getText().toString();
                         btn.setText(tagArray[tagIndex]);
+
                         String result = "";
                         for (String tag : tagArray) {
                             if (result.equals("")) {
@@ -221,6 +257,7 @@ public class FullSizeImageFragment extends Fragment {
                             }
                         }
                         object.setTags(result);
+                        translator.updateMetaData(object);
                         Interface anInterface = (Interface) getActivity();
                         anInterface.updateTag(position);
                     }
@@ -232,31 +269,51 @@ public class FullSizeImageFragment extends Fragment {
 
     public void displayAlertDialogToAddTag() {
         String title = "Would you like to add a tag?";
-        String button1String = "Add tag";
-        String button2String = "Cancel";
+        String addTag = "Add tag";
+        String cancelAddTag = "Cancel";
+
         AlertDialog.Builder ad = new AlertDialog.Builder(getActivity());
         final EditText input = new EditText(getActivity());
         btn = new Button(getActivity());
         input.setHint("Add a tag");
         ad.setTitle(title);
         ad.setView(input);
+
         ad.setNegativeButton(
-                button1String,
+                cancelAddTag,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int arg1) {
-                        String output = input.getText().toString();
-                        btn.setText(output);
-                        ll.addView(btn);
-
+                        // Do nothing for cancel.
                     }
                 }
         );
 
         ad.setPositiveButton(
-                button2String,
+                addTag,
                 new DialogInterface.OnClickListener() {
                     public void onClick(DialogInterface dialog, int arg1) {
-                        // Do nothing for cancel.
+
+                        String output = input.getText().toString();
+
+                        if (!output.isEmpty()) {
+                            btn.setText(output);
+                            object.setTags(tags + ", " + output);
+                            btn.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    int i = object.getTags().split(",").length;
+                                    displayAlertDialogForEditTag(i - 2, btn);
+                                }
+                            });
+                            ll.addView(btn);
+
+                            translator.updateMetaData(object);
+
+                            Interface anInterface = (Interface) getActivity();
+                            anInterface.updateTag(position);
+                        } else {
+                            Toast.makeText(getActivity(), "Tag must contain valid characters", Toast.LENGTH_SHORT).show();
+                        }
                     }
                 }
         );

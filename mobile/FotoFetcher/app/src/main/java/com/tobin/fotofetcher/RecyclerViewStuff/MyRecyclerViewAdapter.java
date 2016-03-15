@@ -1,8 +1,7 @@
 package com.tobin.fotofetcher.RecyclerViewStuff;
 
+import android.content.Context;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.helper.ItemTouchHelper;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,13 +9,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+import com.tobin.fotofetcher.SingletonAndDB.Translator;
 import com.tobin.fotofetcher.R;
 
 import java.util.ArrayList;
 
-public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewAdapter.DataObjectHolder> {
+public class MyRecyclerViewAdapter extends RecyclerView.Adapter<MyRecyclerViewAdapter.DataObjectHolder> {
     private ArrayList<DataObject> mDataset;
     private static MyClickListener myClickListener;
+    Context context;
 
     public static class DataObjectHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         TextView imageName;
@@ -49,6 +50,7 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewA
 
     @Override
     public DataObjectHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+        context = parent.getContext();
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.recyclerview_item, parent, false);
 
@@ -63,14 +65,18 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewA
         Picasso.with(holder.itemView.getContext()).load(holder.url.getText().toString()).resize(100, 100).into(holder.thumb);
     }
 
-    public void addItem(DataObject dataObj, int index) {
+    public void addItem(DataObject dataObj) {
         mDataset.add(dataObj);
-        notifyItemInserted(index);
+        notifyDataSetChanged();
     }
 
     public void deleteItem(int index) {
-        mDataset.remove(index);
-        notifyItemRemoved(index);
+        Translator translator = Translator.getInstance(context);
+        DataObject obj = mDataset.get(index);
+        if(translator.delete(obj)) {
+            mDataset.remove(index);
+            notifyItemRemoved(index);
+        }
     }
 
     @Override
@@ -79,8 +85,6 @@ public class MyRecyclerViewAdapter extends RecyclerView.Adapter <MyRecyclerViewA
     }
 
     public interface MyClickListener {
-         void onItemClick(int position, View v);
+        void onItemClick(int position, View v);
     }
-
-
 }
