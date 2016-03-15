@@ -1,0 +1,12 @@
+RJ Hunter
+AD 440
+Date: 3/14/16
+
+What have you completed since the last report?
+I created a documentDB, Azure Storage, and virtual machine on our class’ Azure account to host our API/Back-End App.  This will give both client teams a test environment for their apps.  I also modified the access control for the server response so the Web team can call the API from a remote server.
+
+What do you plan to complete by the next report?
+I plan to work with the Web and Mobile client teams to answer any questions they have regarding the API so they are successful in their implementations.  
+
+What is getting in your way?
+There is nothing getting in my way of completing my portion of the project.  
