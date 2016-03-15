@@ -27,7 +27,7 @@ app.controller('connectController', function ($scope,$http,
 				             }).done(function(result){
 			
 result.get("/1.1/account/verify_credentials.json").done(function(data) {
-    // console.log(data.screen_name);
+     console.log(data.screen_name);
 	  config.appName= data.screen_name;
 
 });

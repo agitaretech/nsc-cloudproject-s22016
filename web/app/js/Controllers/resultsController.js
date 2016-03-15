@@ -16,8 +16,9 @@ app.controller('resultsController',
 
  function($scope,  $http,$rootScope) {
 	
-	 
-		 
+	 console.log($rootScope.twitter.oauth_token);
+		console.log($rootScope.twitter.oauth_token_secret); 
+		
 	
 			$http({
                 method: 'GET',
@@ -30,9 +31,9 @@ app.controller('resultsController',
                          },
                 url: 'http://ad440api.cloudapp.net/getImages'
                 }).then(function successCallback(response) {
-                                  console.log(response);
+                              //    console.log(response);
                     }, function errorCallback(response) {
- 
+ //console.log(response);
                        });	 
 	 
 
