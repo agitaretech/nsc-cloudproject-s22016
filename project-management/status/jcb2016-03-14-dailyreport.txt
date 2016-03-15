@@ -1,0 +1,4 @@
+Mobile Client group: Joaquin Bautista
+1. Implemented volley and JSON Array objects, coded more of the DB and translater classes.
+2. Still no connection to the DB.
+3. Our plan is to continue coding up the database and translater classes.
