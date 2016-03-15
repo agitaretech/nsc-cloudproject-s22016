@@ -4,17 +4,11 @@ Report:  3-9-2016
 
 
 * What have you completed since the last report?
-
+I finished creating the “Search Box” by using HTML and AngularJS. Also I had meeting with other team members to discuss about reaming work. We work on updating tags yesterday.
 
 * What do you plan to complete by the next report?
-
+I need to add drag/drop capability to the upload page. Also updating tags need to be done. 
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+Since Angular is new to me I should spend more time on several things. Also, 
+I do not know why Dev team wants us to set our own server. I think we need to setup a single server and put all works to it.
