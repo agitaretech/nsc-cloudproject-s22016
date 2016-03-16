@@ -1,0 +1,15 @@
+AD440
+3/4/16
+
+Status Report 24:
+
+1) After hours of work of researching how to implement Twitter oAuth token and response
+   with no progress I contacted Toddy who informed me that much of the work needs to be
+   done on the server side.  I turned my attention to styling our forms to be uniform.
+ 
+
+2) I took about 3 tutorials and poured over a dozen examples.
+
+3  Not at all sure how to integrate twitter oAth login and token into our project. 
+   
+   

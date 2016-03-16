@@ -1,0 +1,5 @@
+Mobile Client group: Joaquin Bautista
+1. I have implemented a delete option for the edit tags but it is not functional.
+2. I have fixed up 3 bugs. They are a loading symbol for the image, maintaining the current list position after tag update, and the photo taking functionality.
+3. Our plan is to connect to the Database, fix up some more bugs we have such as the on backpressed for the image popup, resizing and making the bitmap photos
+taken much clearer. 

@@ -3,9 +3,12 @@ from flask import make_response
 from flask import request
 from flask import jsonify
 from azure_components.api_methods import *
+from flask.ext.cors import CORS
 
 #declare flask app
 app = Flask(__name__)
+CORS(app)
+
 
 #route for get images call
 @app.route("/getImages", methods=['GET'])
@@ -31,10 +34,8 @@ def getImages():
     rtn_json = getImagesJSON(timestamp, prev, tags_new, username, token, secret)
     # return json request
     rtn_body = jsonify(request=rtn_json)
-    resp = make_response(rtn_body)
-    resp.headers['Access-Control-Allow-Origin'] = '*'
 
-    return resp
+    return rtn_body
 
 #route for uploading images
 @app.route("/uploadImage", methods=['POST'])
@@ -51,10 +52,8 @@ def uploadImage():
     rtn_json = uploadImageJSON(username, blob, filename, token, secret, tags.split(','))
     #returns json succes or error json message
     rtn_body = jsonify(request=rtn_json)
-    resp = make_response(rtn_body)
-    resp.headers['Access-Control-Allow-Origin'] = '*'
 
-    return resp
+    return rtn_body
 
 #route for deleting images
 @app.route("/deleteImage", methods=['DELETE'])
@@ -68,10 +67,8 @@ def deleteImage():
     rtn_json = deleteImageJSON(blobURL, token, secret)
     #returns json succes or error json message
     rtn_body = jsonify(request=rtn_json)
-    resp = make_response(rtn_body)
-    resp.headers['Access-Control-Allow-Origin'] = '*'
-
-    return resp
+    
+    return rtn_body
 
 #route for updating tags
 @app.route("/updateTags", methods=['PUT'])
@@ -86,10 +83,8 @@ def updateTags():
     rtn_json = updateTagsJSON(blobURL, tags.split(','), token, secret)
     #returns json succes or error json message
     rtn_body = jsonify(request=rtn_json)
-    resp = make_response(rtn_body)
-    resp.headers['Access-Control-Allow-Origin'] = '*'
 
-    return resp
+    return rtn_body
 
 #initializes app and runs debug
 if __name__ == "__main__":

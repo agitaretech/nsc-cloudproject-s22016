@@ -1,0 +1,4 @@
+Mobile Client group: Joaquin Bautista
+1. I have added a title with a custom font on our login activity page.
+2. Our UI is still disorganized for the moment.
+3. Our plan is to clean up more the UI.

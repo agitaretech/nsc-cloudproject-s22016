@@ -1,0 +1,127 @@
+
+<<<<<<< HEAD
+
+
+=======
+>>>>>>> origin/master
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The HTML5 Herald</title>
+<meta name="description" content="Could Computing User Interface">
+<meta name="author" content="Kianoush">
+<link rel="stylesheet" href="styles.css">
+<script src= "http://ajax.googleapis.com/ajax/libs/angularjs/1.3.16/angular.min.js"></script>
+
+
+
+
+
+</head>
+
+<<<<<<< HEAD
+<body ng-app="myApp" ng-controller="load">
+=======
+<body>
+>>>>>>> origin/master
+<header>
+
+<a href="index.html" id="uploadnewimage">Upload New Image</a>
+
+
+  <img src="images/person.jpg" />
+  <p>Welcome Toddy!</p>
+</header>
+<div id="wrapper">
+<div id="uploadarea">
+<h2>Upload Images and Tags</h2>
+  <form role="form" name="myForm" ng-submit="submitCuisine(myForm.$valid)" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : myForm.tag1.$invalid && myForm.tag1.$touched }">
+      <label for="tag1">Tag #1</label>
+      <input type="text" class="form-control" id="tag1" name="tag1" 
+                  placeholder="Enter tag 1" ng-model="dataform.tag1" required>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : myForm.tag2.$invalid && myForm.tag2.$touched }">
+      <label for="tag2">Tag #2</label>
+      <input type="text" class="form-control" id="tag2" name="tag2" 
+                  placeholder="Enter tag 2" ng-model="dataform.tag2" required>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : myForm.tag3.$invalid && myForm.tag3.$touched }">
+      <label for="tag3">Tag #3</label>
+      <input type="text" class="form-control" id="tag3" name="tag3" 
+                  placeholder="Enter tag 3" ng-model="dataform.tag3" required>
+    </div>
+    <br />
+   
+    <div class="form-group">
+       <label for="file-upload">Find your image</label>
+      <input type="file"  file-input="files" name="file" accept="image/*" class="uploadfilebtn" />
+    </div>
+    <br />
+    <br />
+    <button class="btn btn-primary internalbtns" type="submit" ng-disabled="myForm.$invalid"> Submit</button>
+  </form>
+  
+  
+  
+  
+  <script>
+		//controller
+		var myApp=angular.module("myApp",[]);
+  myApp.controller("load",function($scope,$http){
+    $scope.dataform={};
+    $scope.submitCuisine=function(isvalid){
+	if(isvalid){
+		var fd=new FormData();
+		angular.forEach($scope.files,function(file){
+			fd.append('file',file);
+		});
+	
+		fd.append('formdata',JSON.stringify($scope.dataform));
+<<<<<<< HEAD
+		$http.post('http://www.webolife.com/test/test4/upload.php',fd,{  //   <----- HTTP POST
+=======
+		$http.post('index.html',fd,{  //   <----- HTTP POST
+>>>>>>> origin/master
+			transformRequest:angular.identity,
+			headers:{'Content-type':undefined}
+		}).success(function(data){
+			$scope.status=data;
+			$scope.itemlist.push(data)
+			$scope.message="New Image Added Successfully"
+		});
+	}	
+}
+    
+  });
+
+<<<<<<< HEAD
+  
+=======
+>>>>>>> origin/master
+//----------------------------------------------------
+
+//Directive
+myApp.directive("fileInput",['$parse',function($parse){
+    return{
+        restrict:'A',
+        link:function(scope,ele,attrs){
+            ele.bind('change',function(){
+                $parse(attrs.fileInput).
+                assign(scope,ele[0].files)
+                scope.$apply()
+            });
+        }
+    }
+}]);
+
+		
+		</script>
+  <footer> &nbsp;</footer>
+</div>
+<!--End of wrapper-->
+
+</body>
+</html>

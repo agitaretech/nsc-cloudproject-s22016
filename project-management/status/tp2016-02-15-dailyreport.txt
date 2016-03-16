@@ -1,0 +1,12 @@
+1.  What have you completed since the last report?
+    
+    Started implementing Volley for ajax calls.
+
+2.  What do you plan to complete by the next report?
+    
+    Make more progress on Volley.
+
+3.  What is getting in your way?
+
+    No issues.  
+

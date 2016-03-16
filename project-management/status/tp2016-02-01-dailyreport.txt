@@ -1,0 +1,14 @@
+1.  What have you completed since the last report?
+    
+    Thumbnails of each picture have been added to the listview, but 
+    right now they are just a generic photo, as a placeholder until
+    we get real data.
+
+2.  What do you plan to complete by the next report?
+    
+    Develop some dummy data for the thumbnails.
+
+3.  What is getting in your way?
+
+    No issues.  
+

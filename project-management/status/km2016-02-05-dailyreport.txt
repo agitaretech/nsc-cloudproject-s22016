@@ -1,0 +1,18 @@
+Name: Kianoush Moradian
+Report:  2-5-2016
+
+
+
+* What have you completed since the last report?
+Our team had meeting yesterday. We talked about our project, Issues and problems. 
+Ksenia works on integrating our display image table with our template.
+Also I read about Twitter login and OAuth. Seems lots of thing is happening on Server side. 
+
+* What do you plan to complete by the next report?
+Our team goal is finishing up the display page. My personal goal is keep learning about Twitter login. 
+
+* What is getting in your way?
+As I mentioned before, AngularJS is something new for our team and each team member needs to spend time to accomplish each team goal.
+
+
+

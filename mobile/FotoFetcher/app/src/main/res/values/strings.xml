@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">FotoFetcher</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_full_size_photo">FullSizePhotoActivity</string>
+
+    <!-- JC's code -->
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="google_plus">Google+</string>
+    <string name="log_out">Log Out</string>
+    <string name="welcome">Welcome</string>
+    <string name="tweet">Tweet</string>
+
+    <!-- Social Media Credentials -->
+    <string name="facebook_app_id">1668975446694516</string>
+    <string name="back">Back</string>
+    <string name="dismiss">Dismiss</string>
+    <!-- end of JC's code -->
+</resources>

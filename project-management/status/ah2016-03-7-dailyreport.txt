@@ -1,0 +1,15 @@
+AD440
+3/7/16
+
+Status Report 25:
+
+1)  I completed getting the JSON display page to be uniformly styled
+    according to the other pages. 
+ 
+
+2) I studied how the other pages were styled and really had to do a lot
+   of maneuvering to get this one to be uniform. 
+
+3  Not at all sure how to integrate twitter oAth login and token into our project. 
+   
+   

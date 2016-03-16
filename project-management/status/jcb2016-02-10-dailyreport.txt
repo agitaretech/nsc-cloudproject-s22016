@@ -1,0 +1,6 @@
+Mobile Client group: Joaquin Bautista
+1. We have fixed up the onBackPressed function to go back to home activity if the user presses the hardware back from the popped up image and fixed part of the
+shared preferences were we saved the edited tags if the user gets out of the image tag.
+2. We have a bug that it won't save the edited tags on rotation and we still need to resize the images.
+3. Our plan is to do more research and plan to save the edited tags on rotation, resize the images, and also try to fix to save the state if the user wants to
+add a button and well as also make it functional.
