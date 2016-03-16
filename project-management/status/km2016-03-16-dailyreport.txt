@@ -4,17 +4,13 @@ Report:  3-14-2016
 
 
 * What have you completed since the last report?
-
+I cooperated with my team and dev team and worked on upload POST image and tags. Now the form posts data to the server. It does not encode image to string 64 bit though! 
 
 * What do you plan to complete by the next report?
-
+I am planning to figure out why image encoding does not work. Also I need to spend some time to concatenating string tags with comma delimiters
 
 * What is getting in your way?
+I already tried two methods to convert image to string 64 bit. However I believe server side should have more flexibility in this case, I should find another way to do that. Testing the converted code is hard. In class I asked R.J. to check the delivered data. 
 
 
 
-
-
-
-
-------------------------------> This status report will be completed on due date
