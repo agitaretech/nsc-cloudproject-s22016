@@ -14,9 +14,12 @@ import com.android.volley.toolbox.BasicNetwork;
 import com.android.volley.toolbox.DiskBasedCache;
 import com.android.volley.toolbox.HurlStack;
 import com.android.volley.toolbox.JsonArrayRequest;
+import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 
 import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -45,7 +48,62 @@ public class DatabaseCalls {
 //        mRequestQueue = new RequestQueue(cache, network);
     }
 
-    public JSONArray[] get( final HashMap header, Context context) {
+//    public void getObject( final HashMap header, Context context) {
+//        url += "getImages";
+//        Cache cache = new DiskBasedCache(context.getCacheDir(), 1024 * 1024); // 1MB cap
+//        Network network = new BasicNetwork(new HurlStack());
+//        final RequestQueue mRequestQueue = new RequestQueue(cache, network);
+//        mRequestQueue.start();
+//
+//        JsonObjectRequest req = new JsonObjectRequest(url, null,
+//                new Response.Listener<JSONObject>() {
+//                    @Override
+//                    public void onResponse(JSONObject response) {
+//
+//                        try {
+//
+////                            for (int i = 0; i < response.length(); i++) {
+////
+////                                JSONObject row = (JSONObject) response.get(i);
+////
+////                                Log.d("db", "row in response: " + row);
+////                            }
+//
+//                            JSONArray Jarray = response.getJSONArray("imgs");
+//                            Log.d("db", "in response Jarray: " + Jarray);
+////                            Translator.setJsonArray(Jarray);
+//                        } catch (JSONException e) {
+//                            Log.d("db", "jsonarray exception: " + e.toString());
+//                            e.printStackTrace();
+//                        }
+//
+//                    }
+//                }, new Response.ErrorListener() {
+//            @Override
+//            public void onErrorResponse(VolleyError error) {
+//                Log.d("db", "error: " + error.toString());
+//
+//                mRequestQueue.stop();
+//            }
+//        }) {
+//
+//            @Override
+//            public Map<String, String> getHeaders() throws AuthFailureError {
+//                HashMap<String, String> params = new HashMap<>();
+//                params.put ("username", "fin");
+//                params.put("token", "4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR");
+//                params.put("secret", "BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF");
+//                Log.d("db", "In header");
+////                params.put("Accept", "application/json");
+//                return params;
+//            }
+//        };
+//
+//        mRequestQueue.add(req);
+////        Log.d("db", "response object: " + responseObject[0] + "");
+//    }
+
+    public JSONArray[] get(final HashMap header, Context context) {
         url += "getImages";
 //        final JSONArray responseArray = new JSONArray();
         final JSONArray[] responseObject = new JSONArray[1];
@@ -64,37 +122,45 @@ public class DatabaseCalls {
             @Override
             public void onResponse(JSONArray response) {
 
-                responseObject[0] = response;
-                Log.d("db", "in response");
+
+                try {
+
+                    for (int i = 0; i < response.length(); i++) {
+
+                        JSONObject row = (JSONObject) response.get(i);
+
+                        Log.d("db", "row in response: " + row);
+                    }
+                }catch (JSONException e) {
+                        e.printStackTrace();
+                        mRequestQueue.stop();
+                    }
+
+
+//                responseObject[0] = response;
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-                Log.d("db", "Json obj" + error.toString());
+                Log.d("db", "error: " + error.toString());
 
                 mRequestQueue.stop();
             }
         }) {
             @Override
             public Map<String, String> getHeaders() throws AuthFailureError {
-//                SharedPreferences sharedPref = context.getSharedPreferences("twitter_creds", Context.MODE_PRIVATE);
-//                String twitterUserName = sharedPref.getString("username", null);
-//                String token = sharedPref.getString("token", null);
-//                String secret = sharedPref.getString("secret", null);
-//                HashMap<String, String> params = header;
                 HashMap<String, String> params = new HashMap<>();
                 params.put ("username", "fin");
                 params.put("token", "4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR");
                 params.put("secret", "BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF");
                 Log.d("db", "In header");
-                params.put("Accept", "application/json");
+//                params.put("Accept", "application/json");
                 return params;
             }
         };
 
-        // Adding request to request queue
         mRequestQueue.add(req);
-        Log.d("db", responseObject[0] + "");
+//        Log.d("db", "response object: " + responseObject[0] + "");
         return responseObject;
     }
 
@@ -120,6 +186,10 @@ public class DatabaseCalls {
 //        mRequestQueue.add(deleteRequest);
 //
 //        return result[0];
+        return null;
+    }
+
+    public String put(HashMap hashMap) {
         return null;
     }
 

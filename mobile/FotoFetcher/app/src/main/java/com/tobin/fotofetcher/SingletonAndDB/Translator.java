@@ -10,8 +10,13 @@ import com.tobin.fotofetcher.RecyclerViewStuff.DataObject;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.HashMap;
+import java.util.Locale;
 
 /**
  * Created by Joaquin on 3/1/2016.
@@ -20,10 +25,15 @@ public class Translator {
 
     private static DatabaseCalls databaseCalls;
     private static Translator translator;
+//    private static JSONArray jsonArray;
     static String twitterUserName;
     static String token;
     static String secret;
     static Context transContext;
+
+//    public static void setJsonArray(JSONArray jArray){
+//        jsonArray = jArray;
+//    }
 
     public static Translator getInstance(Context context) {
         if (translator == null) {
@@ -43,11 +53,6 @@ public class Translator {
 
     }
 
-    public String searchFor(String query) {
-
-        return null;
-    }
-
     public boolean delete(DataObject object) {
         HashMap<String, String> hashMap = new HashMap<String, String>();
 
@@ -59,8 +64,6 @@ public class Translator {
         if(deleteResponse != null) {
             //check to see if it succeeded or failed
             try {
-                // Check with DB group for "verification" and check the name of the JSON child
-                // and return.
                 if(deleteResponse.equals("success")) {
                     return true;
                 }
@@ -73,15 +76,27 @@ public class Translator {
 
     //update
     public String updateMetaData(DataObject object) {
+        // Update tags from the DB
+        HashMap<String, String> hashMap = new HashMap<String, String>();
+        hashMap.put("blobURL", object.getUrl());
+        hashMap.put("tags", object.getTags());
+        hashMap.put("token", token);
+        hashMap.put("secret", secret);
         return null;
     }
+
     //add
     public String uploadImage(Bitmap bitmap, String tags, String filename) {
+        return null;
+    }
 
+    //getAllTags
+    public ArrayList<DataObject> getAllTags() {
         return null;
     }
     //getList
     public ArrayList<DataObject> getList(String timestamp, String filter) {
+
         HashMap<String, String> hashMap = new HashMap<String, String>();
 
         if(timestamp != null && !timestamp.equals("")) {
@@ -97,10 +112,13 @@ public class Translator {
         hashMap.put("secret", secret);
 
         /*Needs to be created in the DatabaseCalls class*/
-       JSONArray[] obj = databaseCalls.get(hashMap, transContext);
+//       JSONArray[] obj = databaseCalls.getObject(hashMap, transContext);
+//        JSONArray jsonArray=obj[0];
 
-        JSONArray jsonArray=obj[0];
-//        Log.d("trans", jsonArray.toString());
+        JSONArray[] js = databaseCalls.get(hashMap, transContext);
+        JSONArray jsonArray = js[0];
+//        databaseCalls.get(hashMap, transContext);
+        // this json array is set by the setJsonArray method in this Translator class, called from getObject method in the DatabaseCalls class
         if(jsonArray != null) {
             //check to see if it succeeded or failed
             try {
@@ -124,8 +142,6 @@ public class Translator {
                     objectList.add(dataObject);
                     Log.d("trans", objectList.size() + "");
                     return objectList;
-
-
                 }
 
 
@@ -136,10 +152,6 @@ public class Translator {
             ArrayList<DataObject> dummyData = ObjectList.fillDummyData();
             return dummyData;
         }
-        return null;
-    }
-    //getAllTags
-    public ArrayList<DataObject> getAllTags() {
         return null;
     }
 }

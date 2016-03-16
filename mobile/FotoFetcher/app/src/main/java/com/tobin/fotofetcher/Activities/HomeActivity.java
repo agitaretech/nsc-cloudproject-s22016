@@ -9,6 +9,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.SearchView;
 
+import com.tobin.fotofetcher.SingletonAndDB.DatabaseCalls;
 import com.tobin.fotofetcher.SingletonAndDB.ObjectList;
 import com.tobin.fotofetcher.SingletonAndDB.Translator;
 import com.tobin.fotofetcher.Fragments.FullSizeImageFragment;
@@ -138,7 +139,6 @@ public class HomeActivity extends AppCompatActivity implements Interface, Search
     public boolean onQueryTextSubmit(String query) {
         searchView.clearFocus();
         Translator translator = Translator.getInstance(this);
-        translator.searchFor(query);
         objectList.setFilter(query);
         listFrag.searchUpdate();
         return true;
@@ -146,7 +146,7 @@ public class HomeActivity extends AppCompatActivity implements Interface, Search
 
     @Override
     public boolean onQueryTextChange(String newText) {
-        // If we want to do autofinish for search, implement here.
+        // If we want to do auto finish for search, implement here.
         // get all tags for user, put them in the array, search the array
         // from here.
         return false;
