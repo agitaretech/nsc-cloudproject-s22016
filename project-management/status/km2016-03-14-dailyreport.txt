@@ -1,20 +1,11 @@
 Name: Kianoush Moradian
 Report:  3-14-2016
 
-
-
 * What have you completed since the last report?
-
+Reference to R.J’s new requirements I worked on upload page to make it compatible with what dev team need. I removed two tag fields and it is now working based on one textbox and one file select field. 
 
 * What do you plan to complete by the next report?
-
+I am planning to have meeting with my team members and also dev team as well to fix issue on the upload page. 
 
 * What is getting in your way?
-
-
-
-
-
-
-
-------------------------------> This status report will be completed on due date
+I made required changes in AngularJS file but do not know how I am able to test my code? I have no access to the DB.  Avi and Ksenia are working on display page. Seems sever did not respond appropriately yesterday to them. We need to check it out tomorrow too. 
