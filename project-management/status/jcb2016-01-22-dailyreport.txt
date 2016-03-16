@@ -1,7 +1,0 @@
-Mobile Client group: Joaquin Bautista
-1. We have passed my API and secret credentials for Twitter to the Home page of our app that are just the username and profile image.
-2. The Google plus bug is still not fixed and I managed to at least log on also on the Home page from the Facebook login but couldn't pass its credentials to it
-and in order to successfully pass the Twitter and Facebook credentials we have to comment out its initialize method depending on the login we choose, for instance,
-if we want to log into Facebook we need to comment out the Twitter initialize method for it to work otherwise the application will crash.
-3. Our plan is to first try to fix the Google plus bug by first attempting to log on to display the email and username because it has worked before and it stopped
-working, and also attempt to pass the Facebook credentials to be displayed on the Home page.
