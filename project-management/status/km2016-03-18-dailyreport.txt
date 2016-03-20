@@ -4,17 +4,13 @@ Report:  3-18-2016
 
 
 * What have you completed since the last report?
-
+I worked on AngularJS concatenating function and learned about that. Also I created Google document for gathering team members’ content. I had short meeting with Ksenia and Avi about documenting our project and our next presentation. 
 
 * What do you plan to complete by the next report?
-
+I need to help team to wrap up our project and be ready for our final presentation. 
 
 * What is getting in your way?
+Lots of final deliveries and final exams in my two other classes. 
 
 
 
-
-
-
-
-------------------------------> This status report will be completed on due date
