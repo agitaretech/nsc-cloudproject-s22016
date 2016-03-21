@@ -1,4 +1,26 @@
- <div class="container">
-
-
+ <div class="container" ng-controller="uploadController">
+  <div class="container">
+    <form name="form">
+    <h3>Select file</h3>
+<!--    <form name="form">
+  <input type="file" ng-model="files" name="files" multiple accept="image/*, .zip" maxsize="5000" required base-sixty-four-input>
+  <span ng-show="form.files.$error.maxsize">Files must not exceed 5000 KB</span>
+  <button bg-click="uploadFiles()"></button>
+</form>-->
+    
+    
+      <div class="input-group">
+        <label for="file">Select File</label>
+        <input class="form-control" type="file" ng-model="file" name="inputFile" base-sixty-four-input required maxsize="500" accept="image/*">
+        <span class="help-block">
+          <a ng-click="uploadFiles()" class="btn btn-default">Upload</a>
+         
+        </span>
+        <div class="alert" ng-class="{'alert-danger': form.inputFile.$invalid, 'alert-success': form.inputFile.$valid}">
+          form.inputFile.$error: {{ form.inputFile.$error }}
+        </div>
+      </div>
+   
+     
+  </div>
  </div>

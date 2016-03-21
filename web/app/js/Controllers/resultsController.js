@@ -1,62 +1,86 @@
-
-// app.controller('timelineController', function ($scope,
-//                                         $rootScope) {
-//  $rootScope.twitter.get('/1.1/statuses/home_timeline.json')
-//  .done(function(data) {
-//     $scope.tw_timeline = data;
-//     $scope.$apply();
-//  });
-//});
-
 app.controller('resultsController', 
+function($scope,  $http,$rootScope,ImageApi) {
+//console.log($rootScope.twitter.oauth_token);
+//console.log($rootScope.twitter.oauth_token_secret); 
 
-
-
-
-
- function($scope,  $http,$rootScope) {
+$scope.delete = function(url) {
+	console.log(url);
+	ImageApi.deleteImage(url);
+	$scope.refresh();
+	};
+//$rootScope.prev='true';
+//console.log(function(){ImageApi.GetImages()});
+$scope.updateTags=function(val,blob){
 	
-	 console.log($rootScope.twitter.oauth_token);
-		console.log($rootScope.twitter.oauth_token_secret); 
-		
+
+$http({
+	method: 'PUT',  
+	headers:{
+		'token': $rootScope.twitter.oauth_token,
+		'secret':$rootScope.twitter.oauth_token_secret,
+		'blobURL':blob,
+		'tags':val
+		},
+	url: 'http://ad440api.cloudapp.net/updateTags'
+	}
+	).success(function(data) {
 	
-			$http({
-                method: 'GET',
-                headers:{
-				
-					'username':'mobiletestgrou1',
-                        'token': $rootScope.twitter.oauth_token,
-                        'secret':$rootScope.twitter.oauth_token_secret
-                        
-                         },
-                url: 'http://ad440api.cloudapp.net/getImages'
-                }).then(function successCallback(response) {
-                              //    console.log(response);
-                    }, function errorCallback(response) {
- //console.log(response);
-                       });	 
-	 
+	});
 
-$http({method: 'GET', url: 'postsproto.json'}).success(function(data) {
-$scope.posts = data;
-$scope.pickedImage = {
-        url: ""
-    };
+	console.log(val)
+	$scope.refresh();
 
-   $scope.getPicked = function () {
+	
+	
+	};
+//console.log(ImageApi.GetImages().request.imgs);
+//$scope.pickedImage = {url: ""};
+//$scope.getPicked = function () {return $scope.picked;};
+$scope.refresh=function(){
+	$http({
+	method: 'GET',  
+	headers:{
+		'username':$rootScope.username,
+		'token': $rootScope.twitter.oauth_token,
+		'secret':$rootScope.twitter.oauth_token_secret
+		},
+	url: 'http://ad440api.cloudapp.net/getImages'
+	}
+	).success(function(data) {
+	//console.log(data.request.imgs);	
+		$scope.posts = data.request.imgs;
+		$scope.pickedImage = {url: ""};
+		$scope.getPicked = function () {return $scope.picked;};
+	});
+	
+	
+	
+	};
+$http({
+	method: 'GET',  
+	headers:{
+		'username':$rootScope.username,
+		'token': $rootScope.twitter.oauth_token,
+		'secret':$rootScope.twitter.oauth_token_secret
+		},
+	url: 'http://ad440api.cloudapp.net/getImages'
+	}
+	).success(function(data) {
+	console.log(data.request.imgs);	
+		$scope.posts = data.request.imgs;
+		$scope.pickedImage = {url: "",tags:[],newTags:""};
+		$scope.getPicked = function () {
+			return $scope.picked;
+			};
+	});
 
-        return $scope.picked;
-    };
-
-});
 
 
-
-  }).directive('results', function() {
-  return {
-	  restrict: 'E',
-        replace: true,
-    templateUrl: 'js/Directives/results/results.html'
-  };
+}).directive('results', function() {
+			return {
+					restrict: 'E',
+					replace: true,
+				    templateUrl: 'js/Directives/results/results.html'
+};
 });
 
