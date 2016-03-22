@@ -1,4 +1,20 @@
- <div class="container">
+ <div class="container" ng-controller="uploadController">
+  <div class="container">
+    <form name="form">
 
-
+    
+      <div class="input-group uploadBox col-sm-8">
+        <label for="file" class="col-sm-12">Select File</label>
+        <input class="form-control col-sm-12" type="file" ng-model="file" name="inputFile" base-sixty-four-input required maxsize="500" accept="image/*">
+       
+          <a ng-click="uploadFiles()" class="btn btn-default">Upload</a>
+         
+       
+        <div class="alert" ng-class="{'alert-danger': form.inputFile.$invalid, 'alert-success': form.inputFile.$valid}">
+        
+        </div>
+      </div>
+   
+     
+  </div>
  </div>
