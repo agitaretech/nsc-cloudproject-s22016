@@ -6,16 +6,22 @@
         </td>
       <td><label class="radio" >
           <input type="radio" ng-model="pickedImage.url" name="imageOptions" value="{{post.photo_url}}">
-          {{post.file_name}} </label></td>
+          {{post.file_name.substring(0, 8)}} </label></td>
 
       <td ><span class="badge"  ng-repeat="p in post.tags track by $index" >{{p}}</span></td>
     </tr>
   </table>
   <div class="col-sm-6 imageBox"> <img class="imagePane" src="{{pickedImage.url}}"> </div>
-  <div class="col-sm-6 col-sm-offset-6"></div>
-  <div class="col-sm-7 col-sm-offset-2">
-    <input class="form-control"  type="text" ng-model="pickedImage.newTags" >
+  <div class="col-sm-6">
+   <button ng-click="prev(imageTags)" class="btn btn-default btnTags">Back</button>
+    <button ng-click="next(imageTags)" class="btn btn-default btnTags">Next</button>
+     <button ng-click="updateTags(pickedImage.newTags,pickedImage.url)" class="btn btn-default btnTags">Update tags</button>
+  
+  
+  </div>
+  <div class="col-sm-6">
+    <input class="form-control"  type="text" ng-model="pickedImage.newTags" class="col-sm-6">
  
-  <button ng-click="updateTags(pickedImage.newTags,pickedImage.url)" class="btn btn-default">Update tags</button>
+ 
   </div>
 </div>

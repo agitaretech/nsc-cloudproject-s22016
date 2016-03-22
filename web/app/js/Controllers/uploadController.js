@@ -43,69 +43,12 @@
            console.log(data).error(function(response){console.log(response)});
         })
 		  
-//		 <!-- 	$http({
-//	                method: 'post',  headers:{
-//									'username':$rootScope.user_name,
-//                                    'token': $rootScope.twitter.oauth_token,
-//                                    'secret':$rootScope.twitter.oauth_token_secret,
-//					                'tags':'sfjhsd,sdfsdf,sdfsdf',
-//					                'filename':'test'					                  
-//                         },
-//                url:' http://ad440api.cloudapp.net/uploadImage'
-//			
-//                   }).success(function(data) {
-//			                         console.log(data);
-//                           }).error(function(response){console.log(response);});
-//		  -->
-//		  
-		  
-          //$http.post('server.php', file)
-//          .success(function(res){
-//            uploadedCount ++;
-//            if (uploadedCount == files.length) {
-//              $window.alert('View uploaded files?');
-//              $window.location.assign('/uploads');
-//            }
-//          });
+
         }
       };  
 		
 
-/*
-$scope.add = function(){
-  var f = document.getElementById('file').files[0],
-      r = new FileReader();
-var string=$scope.myfile.base64;
-console.log($scope.myfile);	  
-  r.onloadend = function(e){
-    var data = e.target.result;
-    console.log($scope.myfile.base64);
-	$http({
-	method: 'post',  headers:{
-				
-					'username':$rootScope.user_name,
-                    'token': $rootScope.twitter.oauth_token,
-                    'secret':$rootScope.twitter.oauth_token_secret,
-					'tags':'sfjhsd,sdfsdf,sdfsdf',
-					'filename':'test'
-					 
-                        
-                         },
-                url:' http://ad440api.cloudapp.net/uploadImage',
-				data:{string}
- }).success(function(data) {
-			console.log(data);
-}).error(function(response){console.log(response);});
-	
-	
-	
-	//send you binary data via $http or $resource or do anything else with it
-  }
-  r.readAsBinaryString(f);
-}
 
-
-*/
 
 
   });

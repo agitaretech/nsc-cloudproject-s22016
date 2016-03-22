@@ -1,4 +1,4 @@
-app.controller('connectController', function ($scope,$rootScope, $location) {
+app.controller('connectController', function ($scope,$rootScope, $location,ImageApi) {
 		OAuth.initialize("0KqrS3BMyLqPKxXOPhlH3tY2Z7U");
 	
 		
@@ -11,12 +11,20 @@ app.controller('connectController', function ($scope,$rootScope, $location) {
 				
 				
 						res.me().done(function(me) {
- 										alert('Hello ' + me.alias);
+ 										alert('You are so logged in!');
 										console.log("connect");
 										$rootScope.username=me.alias;
 										$rootScope.twitter = res;
-                                        $location.path('/results');
-                                        $scope.$apply();
+										ImageApi.getImages().success(function(data) {
+	    //console.log(data.request.imgs);
+		$rootScope.posts=data.request.imgs;
+		
+	    $location.path('/results');
+       // $scope.$apply();    
+    
+		
+	});;
+                                        
 										
 										
 										}).fail(function(err) {

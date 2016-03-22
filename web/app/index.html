@@ -19,7 +19,7 @@
 <script type="text/javascript" src="js/Scripts/require.js"></script>
 <script type="text/javascript" src="js/Scripts/r.js"></script>
 <script  type="text/javascript" src="https://raw.githubusercontent.com/adonespitogo/angular-base64-upload/master/src/angular-base64-upload.js"></script>
- 
+  <script type="text/javascript" src="js/Services/ImageApi.js"></script>
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 <!--[if lt IE 9]>
@@ -32,24 +32,25 @@
   <div class="container-fluid"> 
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#defaultNavbar1"><span class="sr-only"></span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button>
       <a class="navbar-brand" href="#">AgiraTech</a></div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="defaultNavbar1">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#/results">Home<span class="sr-only">(current)</span></a></li>
-        <li><a href="#/upload">upload</a></li>
+        <li class="active"><a href="#/results">Home<span class="sr-only"></span></a></li>
+        <li><a href="#/upload">Upload</a></li>
         
       </ul>
-      <form class="navbar-form navbar-left" role="search">
+      <form class="navbar-form navbar-left" role="search" ng-controller="resultsController">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search">
+          <input type="text" class="form-control" placeholder="Search" ng-model="imageTags">
         </div>
-        <button type="submit" class="btn btn-default">Search</button>
+        <button type="submit" class="btn btn-default" ng-click="refreshTags(imageTags)">Search</button>
+       
       </form>
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Link</a></li>
-        <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown<span class="caret"></span></a>
+        <li><a href="#"></a></li>
+       
           
         </li>
       </ul>
@@ -92,6 +93,7 @@
 <script src="js/controllers/connectController.js"></script>
 <script src="js/controllers/uploadController.js"></script>
 <script src="js/controllers/timelineController.js"></script>
+<script src="js/controllers/searchController.js"></script>
 <!--Directives-->
 
 
