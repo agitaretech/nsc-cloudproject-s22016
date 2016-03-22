@@ -1,0 +1,117 @@
+
+
+
+
+<!doctype html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The HTML5 Herald</title>
+<meta name="description" content="Could Computing User Interface">
+<meta name="author" content="Kianoush">
+<link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+
+
+
+
+</head>
+
+<body ng-app="myApp" ng-controller="load">
+<header>
+
+<a href="upload.html" id="uploadnewimage">Upload New Image</a>
+
+
+  <img src="images/person.jpg" />
+  <p>Welcome Toddy!</p>
+</header>
+<div id="wrapper">
+
+<h2>Upload Images and Tags</h2>
+  <form id="myform" role="form" name="myForm" onsubmit=" return mySubmit(this);"  method="post" novalidate>
+    <div class="form-group" ng-class="{ 'has-error' : myForm.tag1.$invalid && myForm.tag1.$touched }">
+      <label for="tag1">Tag #1</label>
+      <input type="text" class="form-control" id="tag1" name="tag1" 
+                  placeholder="Enter tag 1" ng-model="dataform.tag1" value="t1" required>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : myForm.tag2.$invalid && myForm.tag2.$touched }">
+      <label for="tag2">Tag #2</label>
+      <input type="text" class="form-control" id="tag2" name="tag2" value="t2"
+                  placeholder="Enter tag 2" ng-model="dataform.tag2" required>
+    </div>
+    <div class="form-group" ng-class="{ 'has-error' : myForm.tag3.$invalid && myForm.tag3.$touched }">
+      <label for="tag3">Tag #3</label>
+      <input type="text" class="form-control" id="tag3" name="tag3" 
+                  placeholder="Enter tag 3" ng-model="dataform.tag3" value="t3" required>
+    </div>
+
+    <br />
+   
+    <div class="form-group">
+       <label for="file-upload">Find your image</label>
+      <input type="file"  file-input="files" id="inp" name="file1" accept="image/*" class="uploadfilebtn" />
+    </div>
+      <textarea    name="file"  id="b64"> </textarea>
+    <br />
+    <br />
+    <input class="btn btn-primary internalbtns" type="submit" ng-disabled="myForm.$invalid"   />
+
+  <p ng-bind-html="message"></p>
+  </form>
+  
+
+
+  
+  <script>
+
+      EL("inp").addEventListener("change", readFile, false);
+
+      function EL(id) { return document.getElementById(id); } // Get el by ID helper function
+
+      function readFile() {
+          if (this.files && this.files[0]) {
+              var FR= new FileReader();
+              //alert("here");
+              FR.onload = function(e) {
+
+                  base64str = e.target.result;
+
+                  EL("b64").value = base64str.substr(base64str.indexOf(',') + 1);
+                  //alert(EL("b64").innerHTML);
+              };
+              FR.readAsDataURL( this.files[0] );
+          }
+      }
+
+     // 'username':'mobiletestgrou1',
+       //       'token':'4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR',
+         //     'secret':'BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF'
+
+      function mySubmit(f) {
+          alert(($( "#myform" ).serialize()));
+          $.ajax( { url: "http://ad440api.cloudapp.net/uploadImage",
+                    data: JSON.stringify($( "#myform" ).serialize()),
+                      contentType: 'application/json',
+                 type: "POST",
+               beforeSend: function(xhr){
+                   xhr.setRequestHeader('username', 'mobiletestgrou1');
+                   xhr.setRequestHeader('token', '4800385332-ZbrU1XfignI2lA3MjQu7U8KbIkTdYAdj1ArMVFR');
+                   xhr.setRequestHeader('secret', 'BPSs4gwICptsGVZQc9F2EpWcw6ar1gsv4Nlnqvq5PFIdF');
+               } },
+                  function( data ) {
+              alert( "Data Loaded: " + data );
+          });
+        return false;
+      }
+
+
+		
+		</script>
+  <footer> &nbsp;</footer>
+</div>
+<!--End of wrapper-->
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+body {
+	background-color: #EDECEC;
+}
+body * {   		/* all HTML elements inside the body tag */
+	margin: 0;
+	padding: 0;
+}
+a img, img {
+	border: none;
+}
+table {
+	border-collapse: collapse;
+}
+#buttons {
+	width: 250px;
+	margin: 200px auto;
+}
+#buttons input {
+	width: 180px;
+	height: 60px;
+	margin-bottom: 4px;
+	box-shadow: 1px 1px 2px #888888;
+	font-weight:bold;
+	font-size:17px;
+	color:#535353;
+	border-radius:6px;
+	background-color:#fff;
+	text-align:center;
+}
+
+#buttons h1 {
+	font-size: 18px;
+	margin:0 0 30px 0;
+	color: #075FC9;
+	font-family: "Arial", sans-serif;
+	font-weight:bold;
+	
+}
+
+
+h2 { margin-left:30px; margin-top:20px; }
+
+#buttons input:hover {
+	
+	background-color:#3E3C3C;
+	color:#fff;
+	
+	
+}
+
+
+
+#result {  width:200px; margin:0 auto;  }
+
+
+
+
+header { padding: 30px 30px 40px 30px; border-bottom:1px solid #000000;  margin-bottom:20px;}
+header img { width:30px; float:right;}
+header p { float:right; display:inline; vertical-align:middle; margin-top:5px; margin-right:20px;}
+header form input { float:left; padding:5px 30px;}
+header a{ float:left; padding:5px 30px;  background-color:#0E4897; color:#fff; text-decoration:none; border:1px solid #535050;}
+header a:hover { background-color:#AC0C0F; color:#fff;}
+footer { clear:both;}
+#wrapper { width:100%; overflow:hidden; }
+#myleft { width: 42%; float:left;}
+#myright {width:54%; float:right;}
+
+
+#search {  width: 96%; height: 30px; padding:5px;   }
+#myleft {text-align:center;}
+#myleft table { margin: 15px 0;}
+#myleft table tr td{ padding:3px; text-align:center;}
+.table-first { width: 4%;}
+.table-second {width:42%;}
+.table-third {width:43%;}
+
+
+#myright img{ margin:50px auto 20px;  background-image:#fff;}
+#myright form {  text-align:center;}
+#myright table  {width:98%; }
+#myright table tr td{ text-align:center;}
+#myimage-row { height:577px;}
+#tags { width: 96%; height: 30px; padding:5px; }
+
+#tag-button { padding:5px 30px; margin:10px 0; text-align:center;}
+
+
+
+footer { height: 50px;}
+
+
+.form-group { margin:30px;  display:inline-block; }
+.form-group input {  padding:3px;  }
+.internalbtns {  margin-left:30px; padding:10px 30px; background-color:#0E4897; color:#fff; font-size:16px;}
+.internalbtns:hover { background-color:#AC0C0F; color:#fff;   }
+
+.uploadfilebtn  {  background-color:#fff; border:1px dotted #5F5C5C;
+   }
